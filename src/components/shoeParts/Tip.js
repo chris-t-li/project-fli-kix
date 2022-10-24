@@ -6,7 +6,7 @@ function Tip() {
 
             <polygon
                 id="_Tip_"
-                class="cls-1"
+                // class="cls-1"
                 fill={"#d0b300"}
                 opacity={0.25}
 

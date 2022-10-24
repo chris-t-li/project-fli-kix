@@ -4,7 +4,7 @@ function Vamp() {
             {/* <defs><style>.cls-1{fill:#00dfbc;opacity:.25;stroke:#020202;stroke-miterlimit:10;stroke-width:.25px;}</style></defs> */}
             <polygon
                 id="_Vamp_"
-                class="cls-1"
+                // class="cls-1"
                 fill={"#00dfbc"}
                 opacity={0.25}
 

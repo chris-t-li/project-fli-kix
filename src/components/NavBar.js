@@ -1,11 +1,10 @@
-
+import logo from "../assets/fli-kix-logo.png"
 
 function NavBar() {
     return (
         <nav>
             <ul>
-                <li>Logo</li>
-                <li>FLI-KIX</li>
+                <img src={logo} />
                 <li>Home</li>
                 <li>Design Your Own</li>
                 <li>NFK Gallery</li>
