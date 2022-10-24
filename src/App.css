@@ -32,21 +32,35 @@
   position: relative;
 } */
 
-#product-svg {
+.product-svg {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 2;
   mix-blend-mode: multiply;
 }
 
 #shoe {
-  position: relative;
+  position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   /* z-index: 2; */
   height: auto;
 }
+
+path#_Laces_ {
+  position: relative;
+  top: 500px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  mix-blend-mode: multiply;
+  display: inline-block;
+}
+
+
 
 #_Swoosh_ {
   fill: #DBED64;
@@ -64,7 +78,7 @@
   width: 36px;
   margin-left: 0.5em;
   border-radius: 18px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   border: 2px solid #aaa;
   cursor: pointer;
 }
