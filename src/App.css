@@ -28,6 +28,49 @@
   color: #61dafb;
 }
 
+/* ========= NAVBAR STYLING ========== */
+
+.App nav {
+  background-color: rgb(8, 30, 61);
+}
+
+.App nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.App nav ul li {
+  color: white;
+  font-size: 1.5em;
+  display: inline-flex;
+  text-decoration: none;
+  padding: 1em 3em;
+}
+
+.App nav ul img {
+  height: 5em;
+  display: inline-flex;
+}
+
+/* ========= SELECT SHOE PART ========== */
+
+#selectShoePart {
+  float: left;
+  width: 20%;
+}
+
+#selectShoePart div {
+  height: 3em;
+  border: solid 2px lightgray;
+  text-align: center;
+}
+
+#selectShoePart div:hover {
+  background-color: lightcoral;
+  border: solid 2px black;
+}
+
+
 /* #container {
   position: relative;
 } */
@@ -37,7 +80,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: -1;
   mix-blend-mode: multiply;
 }
 
@@ -46,7 +89,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  /* z-index: 2; */
+  z-index: -2;
   height: auto;
 }
 
@@ -55,7 +98,7 @@ path#_Laces_ {
   top: 500px;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
   mix-blend-mode: multiply;
   display: inline-block;
 }

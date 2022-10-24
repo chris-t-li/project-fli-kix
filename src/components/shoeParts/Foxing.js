@@ -5,7 +5,7 @@ function Foxing() {
             {/* <defs><style>.cls-1{fill:#d0b300;opacity:.25;}</style></defs> */}
             <polygon
                 id="_Foxing1_"
-                class="cls-1"
+                // class="cls-1"
                 fill={"#d0b300"}
                 opacity={0.25}
 
@@ -13,7 +13,7 @@ function Foxing() {
 
             <polygon
                 id="_Foxing2_"
-                class="cls-1"
+                // class="cls-1"
                 fill={"#d0b300"}
                 opacity={0.25}
 
