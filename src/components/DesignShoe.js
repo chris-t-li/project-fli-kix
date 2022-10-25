@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ShoePart from "./ShoePart";
 import Shoe from "./Shoe";
 
-const shoeParts = ["EyeStay", "Foxing", "Heel", "Lace", "Quarter", "Swoosh", "Sole", "Tip", "Vamp"];
+const shoeParts = ["EyeStay", "Foxing", "Heel", "Lace", "Lining", "Quarter", "Swoosh", "Sole", "Tongue", "Tip", "Vamp"];
 
 function DesignShoe() {
     const [selectedPart, setSelectedPart] = useState("");

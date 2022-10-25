@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import shoe from './shoe.svg';
-import Artboard from "../assets/Artboard 1.png";
+import finalShoe from "../assets/finalShoe.png";
 import ShoeColors from "./ShoeColors";
 import EyeStay from "./shoeParts/EyeStay";
 import Foxing from "./shoeParts/Foxing";
@@ -11,6 +11,8 @@ import Swoosh from "./shoeParts/Swoosh";
 import Sole from "./shoeParts/Sole";
 import Tip from "./shoeParts/Tip";
 import Vamp from "./shoeParts/Vamp";
+import Lining from "./shoeParts/Lining";
+import Tongue from "./shoeParts/Tongue";
 
 
 function Shoe({ selectedPart }) {
@@ -25,6 +27,8 @@ function Shoe({ selectedPart }) {
         "Sole": "#FFFFFF",
         "Tip": "#d0b300",
         "Vamp": "#00dfbc",
+        "Lining": "#e9006f",
+        "Tongue": "#00dfbc",
     })
 
     function changeColor(color) {
@@ -43,8 +47,10 @@ function Shoe({ selectedPart }) {
             <Sole colorObj={colorObj} />
             <Tip colorObj={colorObj} />
             <Vamp colorObj={colorObj} />
+            <Lining colorObj={colorObj} />
+            <Tongue colorObj={colorObj} />
 
-            <img id="shoe" src={Artboard} alt="shoe" />
+            <img id="shoe" src={finalShoe} alt="shoe" />
             <ShoeColors changeColor={changeColor} />
         </div>
     )
