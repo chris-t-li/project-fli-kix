@@ -16,7 +16,6 @@ function ShoeColors({ changeColor }) {
 
     function handleClick(e) {
         //let hex = e.target.value
-        console.log(e.target.value)
         changeColor(e.target.value)
     }
 

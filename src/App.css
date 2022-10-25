@@ -39,17 +39,25 @@
   padding: 0;
 }
 
-.App nav ul li {
+.App nav ul a {
   color: white;
   font-size: 1.5em;
-  display: inline-flex;
   text-decoration: none;
-  padding: 1em 3em;
+  padding: 1em;
+  display: inline-flex;
 }
 
 .App nav ul img {
   height: 5em;
-  display: inline-flex;
+  background-color: rgb(8, 30, 61);
+  display: inline-block;
+
+}
+
+/* ========= HOME PAGE ========== */
+
+img#homeImg {
+  width: 100%;
 }
 
 /* ========= SELECT SHOE PART ========== */
