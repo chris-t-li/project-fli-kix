@@ -73,11 +73,15 @@ img#homeImg {
   text-align: center;
 }
 
-#selectShoePart div:hover {
+/* #selectShoePart div:hover {
   background-color: lightcoral;
   border: solid 2px black;
-}
+} */
 
+#convert-btn {
+  margin-left: 500px;
+  width: 10em;
+}
 
 /* #container {
   position: relative;
@@ -135,3 +139,36 @@ path#_Laces_ {
 }
 
 /* ========= COLOR PALLET ========== */
+
+/* div#shoeCont {
+  width: 2000px;
+  height: 1000px;
+} */
+
+div.shoe-Card {
+  border: solid 1px black;
+  width: 25%;
+  height: 400px;
+  margin: 2em;
+  padding: 1em;
+}
+
+div.shoe-Card img {
+  width: 80%;
+}
+
+div#container {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  height: 60%;
+  /* bottom: 0;
+  right: 0; */
+}
+
+div#shoeContainer {
+  border: solid 1px black;
+  width: 100%;
+  height: 500px;
+  float: left;
+}
