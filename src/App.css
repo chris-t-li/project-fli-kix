@@ -78,12 +78,14 @@ img#homeImg {
   border: solid 2px black;
 }
 
-
-/* div#container {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
+div#container {
+  height: 750px;
+  width: 750px;
+  position: absolute;
+  left: 25%;
+  top: 15%;
+  border: solid 1px black;
+}
 
 .product-svg {
   position: absolute;

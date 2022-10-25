@@ -12,20 +12,22 @@ function DesignShoe() {
     }
 
     return (
-        <div id="selectShoePart">
-            <h3>Select part of shoe below</h3>
-            {shoeParts.map(part => {
-                return <ShoePart
-                    part={part}
-                    key={part}
-                    selectedPart={selectedPart}
-                    selectShoePart={selectShoePart}
-                />
-            })
-            }
+        <div>
+            <div id="selectShoePart">
+                <h3>Select part of shoe below</h3>
+                {shoeParts.map(part => {
+                    return <ShoePart
+                        part={part}
+                        key={part}
+                        selectedPart={selectedPart}
+                        selectShoePart={selectShoePart}
+                    />
+                })
+                }
+            </div>
             <Shoe
-                selectedPart={selectedPart}
-            />
+                    selectedPart={selectedPart}
+                />
         </div>
     );
 }
