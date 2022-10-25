@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import ShoePart from "./ShoePart";
+import Shoe from "./Shoe";
+
+const shoeParts = ["EyeStay", "Foxing", "Heel", "Lace", "Quarter", "Swoosh", "Sole", "Tip", "Vamp"];
 
 function SelectShoePart() {
-    function handleClick(e) {
-        console.log(e.target)
+    const [selectedPart, setSelectedPart] = useState("");
+
+    function selectShoePart(e) {
+        setSelectedPart(e)
     }
 
     return (
         <div id="selectShoePart">
             <h3>Select part of shoe below</h3>
-            <div onClick={handleClick} className="shoePart" ><h4>EyeStay</h4></div>
-            <div onClick={handleClick} className="shoePart"><h4>Foxing</h4></div>
-            <div onClick={handleClick} className="shoePart"><h4>Heel</h4></div>
-            <div onClick={handleClick} className="shoePart"><h4>Lace</h4></div>
-            <div onClick={handleClick} className="shoePart"><h4>Quarter</h4></div>
-            <div onClick={handleClick} className="shoePart"><h4>Sole</h4></div>
-            <div onClick={handleClick} className="shoePart"><h4>Swoosh</h4></div>
-            <div onClick={handleClick} className="shoePart"><h4>Tip</h4></div>
-            <div onClick={handleClick} className="shoePart"><h4>Vamp</h4></div>
+            {shoeParts.map(part => {
+                return <ShoePart
+                    part={part}
+                    key={part}
+                    selectedPart={selectedPart}
+                    selectShoePart={selectShoePart}
+                />
+            })
+            }
+            <Shoe
+                selectedPart={selectedPart}
+            />
         </div>
     );
 }

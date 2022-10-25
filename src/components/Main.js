@@ -6,8 +6,8 @@ function Main() {
     return (
         <>
             <Design />
-            <Gallery />
-            <Buy />
+            {/* <Gallery />
+            <Buy /> */}
         </>
     );
 }

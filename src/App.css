@@ -112,7 +112,7 @@ path#_Laces_ {
 .colors {
   display: flex;
   position: fixed;
-  bottom: 2em;
+  top: 15em;
   right: 2em;
 }
 
@@ -125,3 +125,5 @@ path#_Laces_ {
   border: 2px solid #aaa;
   cursor: pointer;
 }
+
+/* ========= COLOR PALLET ========== */

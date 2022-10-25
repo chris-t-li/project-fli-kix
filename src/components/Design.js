@@ -6,8 +6,8 @@ function Design() {
     return (
         <>
             <SelectShoePart />
-            <DisplayDesign />
-            <ColorPallet />
+            {/* <DisplayDesign /> */}
+            {/* <ColorPallet /> */}
         </>
     )
 }
