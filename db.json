@@ -17,22 +17,103 @@
                 "Vamp": "#00dfbc"
             }
         },
+        
         {
             "id": 2,
             "type": "AirForce Max",
             "isNFK": false,
             "isBought": false,
             "color-pallet": {
-                "Swoosh": "#ff0000",
+                "Swoosh": "#1e2024",
+                "EyeStay": "#661f45",
+                "Foxing": "#d0b300",
+                "Heel": "#e1e851",
+                "Lace": "#e1e851",
+                "Quarter": "#8cd147",
+                "Sole": "#8cd147",
+                "Tip": "#d0b300",
+                "Vamp": "#8cd147",
+                "tongue":"#1e2024",
+                "lining": "#8cd147"
+            }
+        },
+        {
+            "id": 3,
+            "type": "AirForce Max",
+            "isNFK": false,
+            "isBought": false,
+            "color-pallet": {
+                "Swoosh": "#4a9ccf",
                 "EyeStay": "#020202",
                 "Foxing": "#d0b300",
-                "Heel": "#00dfbc",
-                "Lace": "#0081c6",
-                "Quarter": "#e9006f",
+                "Heel": "#661f45",
+                "Lace": "#e1e851",
+                "Quarter":  "#1e2024",
                 "Sole": "#FFFFFF",
-                "Tip": "#d0b300",
-                "Vamp": "#00dfbc"
+                "Tip": "#e1e851",
+                "Vamp": "#1e2024",
+                "Tongue":"#4a9ccf",
+                "Lining": "#4a9ccf"
+            }
+        },
+        {
+            "id": 4,
+            "type": "AirForce Max",
+            "isNFK": false,
+            "isBought": false,
+            "color-pallet": {
+                "Swoosh": "#4a9ccf",
+                "EyeStay": "#8cd147",
+                "Foxing": "#661f45",
+                "Heel": "#661f45",
+                "Lace": "#661f45",
+                "Quarter": "#661f45",
+                "Sole": "#8cd147",
+                "Tip": "#661f45",
+                "Vamp": "#4a9ccf",
+                "tongue": "#8cd147",
+                "lining": "#8cd147"
+            }
+        },
+        {
+            "id": 5,
+            "type": "AirForce Max",
+            "isNFK": false,
+            "isBought": false,
+            "color-pallet": {
+                "Swoosh":  "#e1e851",
+                "EyeStay": "#661f45",
+                "Foxing": "#661f45",
+                "Heel": "#4a9ccf",
+                "Lace": "#e1e851",
+                "Quarter": "#4a9ccf",
+                "Sole": "#e1e851",
+                "Tip": "#661f45",
+                "Vamp": "#4a9ccf",
+                "tongue":"#1e2024",
+                "lining": "#4a9ccf"
+            }
+        },
+        {
+            "id": 6,
+            "type": "AirForce Max",
+            "isNFK": false,
+            "isBought": false,
+            "color-pallet": {
+                "Swoosh":  "#df0000",
+                "EyeStay": "#0059df",
+                "Foxing": "#661f45",
+                "Heel": "#c5df00",
+                "Lace": "#e1e851",
+                "Quarter": "#c5df00",
+                "Sole": "#c100df",
+                "Tip": "#661f45",
+                "Vamp": "#98df00",
+                "tongue":"#1e2024",
+                "lining": "#df0000"
             }
         }
+
+        
     ]
 }

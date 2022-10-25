@@ -34,7 +34,7 @@ function Shoe({ selectedPart }) {
     function changeColor(color) {
         setColorObj({ ...colorObj, [selectedPart]: color })
     }
-    //console.log("In shoe: ", colorObj)
+    console.log("In shoe: ", colorObj)
 
     return (
         <div id="container">
