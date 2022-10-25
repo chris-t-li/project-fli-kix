@@ -13,27 +13,39 @@ import Tip from "./shoeParts/Tip";
 import Vamp from "./shoeParts/Vamp";
 
 
-function Shoe() {
-    const [color, setColor] = useState("#ff0000")
+function Shoe({ selectedPart }) {
 
-    function changeSwooshColor(color) {
-        setColor(color);
+    const [colorObj, setColorObj] = useState({
+        "Swoosh": "#ff0000",
+        "EyeStay": "#020202",
+        "Foxing": "#d0b300",
+        "Heel": "#00dfbc",
+        "Lace": "#0081c6",
+        "Quarter": "#e9006f",
+        "Sole": "#FFFFFF",
+        "Tip": "#d0b300",
+        "Vamp": "#00dfbc",
+    })
+
+    function changeColor(color) {
+        setColorObj({ ...colorObj, [selectedPart]: color })
     }
+    console.log("In shoe: ", colorObj)
 
     return (
         <div id="container">
-            <Swoosh />
-            <EyeStay />
-            <Lace />
-            <Foxing />
-            <Heel />
-            <Quarter />
-            <Sole />
-            <Tip />
-            <Vamp />
+            <Swoosh colorObj={colorObj} />
+            <EyeStay colorObj={colorObj} />
+            <Lace colorObj={colorObj} />
+            <Foxing colorObj={colorObj} />
+            <Heel colorObj={colorObj} />
+            <Quarter colorObj={colorObj} />
+            <Sole colorObj={colorObj} />
+            <Tip colorObj={colorObj} />
+            <Vamp colorObj={colorObj} />
 
             <img id="shoe" src={Artboard} alt="shoe" />
-            <ShoeColors changeSwooshColor={changeSwooshColor} />
+            <ShoeColors changeColor={changeColor} />
         </div>
     )
 }
