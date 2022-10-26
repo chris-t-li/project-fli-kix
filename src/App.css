@@ -7,6 +7,7 @@
 }
 
 .App-logo {
+  
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,6 +36,7 @@
 /* ========= NAVBAR STYLING ========== */
 
 .App nav {
+  background-color: rgb(8, 35, 61);
   top: 0px;
   left: 0px;
 }
@@ -42,6 +44,11 @@
 .App nav ul {
   margin: 0;
   padding: 0;
+}
+
+.App nav ul a {
+  color: rgb(129, 199, 222);
+  font-size: 1.66em;
   font-family: 'Righteous';
 }
 
@@ -49,8 +56,10 @@
   color: rgb(8, 30, 61);
   font-size: 1.5em;
   text-decoration: none;
-  padding: 1em;
-  display: inline-flex;
+  padding: 1.2em;
+  text-align: justify;
+  display: inline-block;
+  
 }
 
 .App nav ul a:hover {
@@ -59,8 +68,13 @@
 }
 
 .App nav ul img {
-  height: 5em;
+  height: 3.7em;
+  float: left;
   background-color: rgb(8, 30, 61);
+  display: inline-block;
+  border: none;
+  padding: .7em;
+  /* width: 12.5%; */
 }
 
 /* ========= HOME PAGE ========== */
