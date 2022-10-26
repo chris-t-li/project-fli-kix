@@ -47,29 +47,25 @@
 }
 
 .App nav ul a {
-  color: rgb(129, 199, 222);
-  font-size: 1.66em;
-  font-family: 'Righteous';
-}
-
-.App nav ul a {
   color: rgb(8, 30, 61);
   font-size: 1.5em;
   text-decoration: none;
   padding: 1.2em;
   text-align: justify;
   display: inline-block;
-  
+  color: rgb(129, 199, 222);
+  font-size: 1.66em;
+  font-family: 'Righteous';
 }
 
 .App nav ul a:hover {
   font-style: italic;
-  color:rgb(240, 227, 128);
+  color: rgb(240, 227, 128);
+  text-decoration: underline;
 }
 
 .App nav ul img {
   height: 3.7em;
-  float: left;
   background-color: rgb(8, 30, 61);
   display: inline-block;
   border: none;
@@ -226,7 +222,7 @@ div.shoe-card-img img {
   position: absolute;
   top: 0;
   left: 20%;
-  z-index: 0;
+  z-index: -1;
   border: solid 2px rgb(255, 255, 255);
 
 }

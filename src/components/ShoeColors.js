@@ -8,7 +8,9 @@ function ShoeColors({ changeColor }) {
         "#4a9ccf",
         "#661f45",
         "#1e2024",
-        "#800000"
+        "#800000",
+        "#e28743",
+        "#FFFFFF"
     ]
 
     // for (let i = 0; i < colorsArray.length; i++) {
@@ -29,6 +31,8 @@ function ShoeColors({ changeColor }) {
             <button onClick={handleClick} className="color" style={{ "backgroundColor": "#661f45" }} value="#661f45"></button>
             <button onClick={handleClick} className="color" style={{ "backgroundColor": "#1e2024" }} value="#1e2024"></button>
             <button onClick={handleClick} className="color" style={{ "backgroundColor": "#800000" }} value="#800000"></button>
+            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#e28743" }} value="#e28743"></button>
+            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#ffffff" }} value="#ffffff"></button>
         </div>
     )
 }

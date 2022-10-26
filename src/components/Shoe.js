@@ -18,18 +18,32 @@ import Tongue from "./shoeParts/Tongue";
 function Shoe({ selectedPart, addNewShoe }) {
     // Define State - {"ShoePart": "Color"}
     const [colorObj, setColorObj] = useState({
-        "Swoosh": "#ff0000",
-        "EyeStay": "#020202",
-        "Foxing": "#d0b300",
-        "Heel": "#00dfbc",
-        "Lace": "#0081c6",
-        "Quarter": "#e9006f",
-        "Sole": "#FFFFFF",
-        "Tip": "#d0b300",
-        "Vamp": "#00dfbc",
-        "Lining": "#e9006f",
-        "Tongue": "#00dfbc",
+        "Swoosh": "#ffffff",
+        "EyeStay": "#ffffff",
+        "Foxing": "#ffffff",
+        "Heel": "#ffffff",
+        "Lace": "#ffffff",
+        "Quarter": "#ffffff",
+        "Sole": "#ffffff",
+        "Tip": "#ffffff",
+        "Vamp": "#ffffff",
+        "Lining": "#ffffff",
+        "Tongue": "#ffffff",
     })
+
+    // const [colorObj, setColorObj] = useState({
+    //     "Swoosh": "#ff0000",
+    //     "EyeStay": "#020202",
+    //     "Foxing": "#d0b300",
+    //     "Heel": "#00dfbc",
+    //     "Lace": "#0081c6",
+    //     "Quarter": "#e9006f",
+    //     "Sole": "#FFFFFF",
+    //     "Tip": "#d0b300",
+    //     "Vamp": "#00dfbc",
+    //     "Lining": "#e9006f",
+    //     "Tongue": "#00dfbc",
+    // })
 
     // Dynamically Update Color
     function changeColor(color) {
