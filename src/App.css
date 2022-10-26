@@ -47,29 +47,25 @@
 }
 
 .App nav ul a {
-  color: rgb(129, 199, 222);
-  font-size: 1.66em;
-  font-family: 'Righteous';
-}
-
-.App nav ul a {
   color: rgb(8, 30, 61);
   font-size: 1.5em;
   text-decoration: none;
   padding: 1.2em;
   text-align: justify;
   display: inline-block;
-
+  color: rgb(129, 199, 222);
+  font-size: 1.66em;
+  font-family: 'Righteous';
 }
 
 .App nav ul a:hover {
   font-style: italic;
   color: rgb(240, 227, 128);
+  text-decoration: underline;
 }
 
 .App nav ul img {
   height: 3.7em;
-  float: left;
   background-color: rgb(8, 30, 61);
   display: inline-block;
   border: none;
@@ -165,11 +161,13 @@ div#container {
   z-index: 3;
   display: inline-block;
   margin: 3px;
+  width: 300px;
 }
 
 .color {
   height: 60px;
   width: 60px;
+  margin: 3px;
   margin-left: 0.5em;
   /* border-radius: 18px; */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
