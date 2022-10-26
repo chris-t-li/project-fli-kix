@@ -1,0 +1,13 @@
+#checkout-shoe-main-image {
+    width: 40%;
+    display: inline-block;
+}
+
+.checkout-form fieldset div input {
+    width: 45%;
+    height: 50px;
+    display: inline-block;
+    border: solid 2px black;
+    box-shadow: 7px 7px 7px rgb(0, 0, 0);
+    font-style: italic;
+}

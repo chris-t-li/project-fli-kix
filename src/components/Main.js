@@ -21,19 +21,15 @@ function Main() {
         setShoeData([...shoeData, obj])
     }
 
-    function buyShoe(shoe){
+    function buyShoe(shoe) {
         setCheckoutShoe(shoe);
     }
 
     function updateBoughtShoe(boughtShoe) {
-        setShoeData([...shoeData].map(shoe => {
-            if(boughtShoe.id === shoe.id) {
-                return {...shoe, isBought: true}
-            } else {
-                return shoe;
-            }
-        }))
-
+        const filtArr = [...shoeData].filter(shoe => {
+            return boughtShoe.id !== shoe.id
+        })
+        setShoeData([boughtShoe, ...filtArr])
     }
 
     return (
@@ -48,10 +44,10 @@ function Main() {
                 <Gallery shoeData={shoeData} buyShoe={buyShoe} />
             </Route>
             <Route path="/buy">
-                <Buy 
-                shoeData={shoeData} 
-                checkoutShoe={checkoutShoe}
-                updateBoughtShoe={updateBoughtShoe}
+                <Buy
+                    shoeData={shoeData}
+                    checkoutShoe={checkoutShoe}
+                    updateBoughtShoe={updateBoughtShoe}
                 />
             </Route>
         </>
