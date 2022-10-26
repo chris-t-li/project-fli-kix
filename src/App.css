@@ -207,7 +207,7 @@ div#container {
 /* ========= GALLERY ========== */
 
 #gallery {
-  background-color:  rgb(250, 250, 250);
+  background-color: rgba(255, 255, 255);
   z-index: -5;
 }
 
@@ -237,10 +237,12 @@ div.shoe-card-img img {
 }
 
 div.shoe-card-img img:hover {
+  background-color: rgba(129, 199, 222, 0.75);
   border: solid 2px rgb(0, 0, 0);
   border-radius: 10px;
   box-shadow: 10px 10px 10px rgb(0, 0, 0);
   transform: scale(1.1);
+  z-index: 0;
 }
 
 div.shoe-card h3 {
@@ -259,13 +261,15 @@ div.shoe-card p {
   font-style: italic;
   font-size: 1.5rem;
   text-transform: uppercase;
-  margin-bottom: -0.1em;
-  margin-left: 25%;
+  margin-bottom: -0.2em;
+  margin-top: -0.5em;
+  margin-left: 75%;
+  /* padding: 10px 5px 5px 20px; */
 }
 
 #buy-sold {
   position: absolute;
-  margin-top: 13%;
+  margin-top: 15%;
   margin-left: -1em;
   height: 5%;
   width: 8%;
