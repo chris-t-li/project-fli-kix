@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link, useHistory } from 'react-router-dom'
 
-function CheckoutForm({checkoutShoe, updateBoughtShoe}) {
+function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
@@ -34,42 +34,43 @@ function CheckoutForm({checkoutShoe, updateBoughtShoe}) {
 
                 history.push("/gallery")
             })
-            //.then(newCheckout => onCheckOut(newCheckout))
+        //.then(newCheckout => onCheckOut(newCheckout))
     }
-    
+
 
     return (
-        <div className="checkout-form" >
-            <h2>Buy</h2>
-            <form onSubmit={handleCheckout}>
+        <div >
+            {/* <h2>Buy</h2> */}
+            <form onSubmit={handleCheckout} className="checkout-form">
                 <fieldset>
-                    <div>
-                        <img src={checkoutShoe.imageStr} />
+
+                    <div className="checkout-form-container">
+                        <input type="text" name="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
                     </div>
-                <div>
-                <input type="text" name="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
-                </div>
-                <div>
-                <input type="text" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-                </div>
-                <div>
-                <input type="number" name="phone" placeholder="xxx-xxxx" onChange={(e) => setPhone(e.target.value)} />
-                </div>
-                <div>
-                {/* <Link to="/gallery">  */}
-                    <input type="submit" name="buy" value="CHECKOUT"/>
-                {/* </Link> */}
-                </div>
+                    <div className="checkout-form-container">
+                        <input type="text" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="checkout-form-container">
+                        <input type="number" name="phone" placeholder="xxx-xxxx" onChange={(e) => setPhone(e.target.value)} />
+                    </div>
+                    <div className="checkout-form-container">
+                        {/* <Link to="/gallery">  */}
+                        <input type="submit" name="buy" value="CHECKOUT" />
+                        {/* </Link> */}
+                    </div>
+                    <div id="checkout-shoe-main-image-container">
+                        <img id="checkout-shoe-main-image" src={checkoutShoe.imageStr} />
+                    </div>
 
                 </fieldset>
-                
-                    {/* {isBought ? (
+
+                {/* {isBought ? (
                     <button onClick={() => setIsBought(false)}>Buy</button>
                     ) :( 
                     <button onClick={() => setIsBought(true)}>Sold</button>
                     )} */}
-                
-                
+
+
             </form>
         </div>
 

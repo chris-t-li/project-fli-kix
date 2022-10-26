@@ -7,7 +7,7 @@
 }
 
 .App-logo {
-  
+
   height: 40vmin;
   pointer-events: none;
 }
@@ -59,12 +59,12 @@
   padding: 1.2em;
   text-align: justify;
   display: inline-block;
-  
+
 }
 
 .App nav ul a:hover {
   font-style: italic;
-  color:rgb(240, 227, 128);
+  color: rgb(240, 227, 128);
 }
 
 .App nav ul img {
@@ -190,8 +190,8 @@ div#container {
   left: 75px;
   font-size: 20px;
   font-family: 'Righteous';
-  color:rgb(0, 0, 0);
-  background-color:rgb(64, 169, 102);
+  color: rgb(0, 0, 0);
+  background-color: rgb(64, 169, 102);
   border: 2px solid rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -199,7 +199,7 @@ div#container {
 }
 
 #saveAsNfk:hover {
-  background-color:rgb(53, 140, 85);
+  background-color: rgb(53, 140, 85);
   border: solid 2px black;
   box-shadow: 7px 7px 7px rgb(0, 0, 0);
   font-style: italic;
@@ -226,7 +226,7 @@ div.shoe-card-img img {
   position: absolute;
   top: 0;
   left: 20%;
-  z-index: 0;
+  z-index: -1;
   border: solid 2px rgb(255, 255, 255);
 
 }
