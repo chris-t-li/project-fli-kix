@@ -1,7 +1,7 @@
 function Swoosh({ colorObj }) {
     return (
         <svg
-            id="Layer_Swoosh"
+            // className="Layer_Swoosh"
             className="product-svg"
             viewBox="0 0 750 750"
         >

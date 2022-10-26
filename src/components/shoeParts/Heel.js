@@ -1,6 +1,8 @@
 function Heel({ colorObj }) {
     return (
-        <svg id="Layer_Heel" className="product-svg" viewBox="0 0 750 750">
+        <svg
+            // id="Layer_Heel" 
+            className="product-svg" viewBox="0 0 750 750">
             {/* <defs><style>.cls-1{fill:#00dfbc;opacity:.25;stroke:#020202;stroke-miterlimit:10;stroke-width:.25px;}</style></defs> */}
 
             <polygon

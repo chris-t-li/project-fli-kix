@@ -1,7 +1,9 @@
 
 function Sole({ colorObj }) {
     return (
-        <svg id="Layer_Sole" className="product-svg" viewBox="0 0 750 750">
+        <svg
+            // id="Layer_Sole" 
+            className="product-svg" viewBox="0 0 750 750">
             {/* <defs><style>.cls-1{opacity:.25;}</style></defs> */}
             <polygon
                 id="_Sole_"

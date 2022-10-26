@@ -15,8 +15,8 @@ import Lining from "./shoeParts/Lining";
 import Tongue from "./shoeParts/Tongue";
 
 
-function Shoe({ selectedPart }) {
-
+function Shoe({ selectedPart, addNewShoe }) {
+    // Define State - {"ShoePart": "Color"}
     const [colorObj, setColorObj] = useState({
         "Swoosh": "#ff0000",
         "EyeStay": "#020202",
@@ -31,13 +31,19 @@ function Shoe({ selectedPart }) {
         "Tongue": "#00dfbc",
     })
 
+    // Dynamically Update Color
     function changeColor(color) {
         setColorObj({ ...colorObj, [selectedPart]: color })
     }
-    console.log("In shoe: ", colorObj)
+
+    function handleClick() {
+        console.log("hi")
+        addNewShoe(colorObj)
+    }
 
     return (
         <div id="container">
+            {/* Layered <SVG><polygon> Components*/}
             <Swoosh colorObj={colorObj} />
             <EyeStay colorObj={colorObj} />
             <Lace colorObj={colorObj} />
@@ -49,9 +55,11 @@ function Shoe({ selectedPart }) {
             <Vamp colorObj={colorObj} />
             <Lining colorObj={colorObj} />
             <Tongue colorObj={colorObj} />
-
+            {/* Base Shoe Image */}
             <img id="shoe" src={finalShoe} alt="shoe" />
+            {/* Color Pallet - Right Hand Side */}
             <ShoeColors changeColor={changeColor} />
+            <button onClick={handleClick}>Save as NFK</button>
         </div>
     )
 }

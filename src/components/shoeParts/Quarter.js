@@ -1,6 +1,8 @@
 function Quarter({ colorObj }) {
     return (
-        <svg id="Layer_Quarter" className="product-svg" viewBox="0 0 750 750">
+        <svg
+            // id="Layer_Quarter" 
+            className="product-svg" viewBox="0 0 750 750">
             {/* <defs><style>.cls-1{fill:#e9006f;opacity:.25;}</style></defs> */}
 
             <polygon

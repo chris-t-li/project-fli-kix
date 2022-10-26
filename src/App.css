@@ -142,3 +142,41 @@ path#_Laces_ {
 
 /* ========= COLOR PALLET ========== */
 
+div.shoe-card {
+  display: inline-block;
+  width: 25%;
+  height: 400px;
+  margin: 2em;
+  border: solid 1px black;
+}
+
+div.shoe-card-img {
+  position: relative;
+}
+
+div.shoe-card-img img {
+  /* margin: 3em; */
+  /* display: inline-block; */
+  width: 75%;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  z-index: -2;
+}
+
+/* div.shoe-card-img div#container,
+div.shoe-card-img div#container img {
+  width: 200px;
+  height: 200px;
+} */
+
+div.card-containers svg.product-svg {
+  width: 75%;
+}
+
+div#tempimgcontainer {
+  margin-top: 900px;
+  top: 1000px;
+  border: solid 1px black;
+  height: 1000px;
+}
