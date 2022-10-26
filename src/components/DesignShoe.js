@@ -29,7 +29,13 @@ function DesignShoe({ renderNewShoe }) {
                             "Content-Type": "application/json",
                             Accept: "application/json",
                         },
-                        body: JSON.stringify({ ...colorObj, "imageStr": base64String })
+                        body: JSON.stringify({
+                            "type": "AirForce Max",
+                            "isNFK": false,
+                            "isBought": false,
+                            "color-pallet": colorObj,
+                            "imageStr": base64String
+                        })
                     })
                         .then(res => res.json())
                         .then(obj => renderNewShoe(obj))
