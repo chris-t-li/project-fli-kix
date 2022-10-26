@@ -253,6 +253,16 @@ div.shoe-card h3 {
   margin-left: 25%;
 }
 
+div.shoe-card p {
+  font-family: futura-pt-condensed, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: -0.1em;
+  margin-left: 25%;
+}
+
 #buy-sold {
   position: absolute;
   margin-top: 13%;
