@@ -62,6 +62,7 @@
   font-style: italic;
   color: rgb(240, 227, 128);
   text-decoration: underline;
+  text-shadow: 10px 10px 10px rgb(0, 0, 0);
 }
 
 .App nav ul img {
@@ -224,31 +225,40 @@ div.shoe-card-img {
 }
 
 div.shoe-card-img img {
-  /* margin: 3em; */
-  /* display: inline-block; */
+  margin: 1em;
   width: 75%;
   position: absolute;
   top: 0;
   left: 20%;
   z-index: 0;
   border: solid 2px rgb(0, 0, 0);
-  border-radius: 2px;
+  border-radius: 10px;
   box-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+
+div.shoe-card-img img:hover {
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+  transform: scale(1.1);
 }
 
 div.shoe-card h3 {
   font-family: futura-pt-condensed, sans-serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 30px;
+  font-size: 2rem;
   text-transform: uppercase;
+  margin-bottom: -0.1em;
+  margin-left: 25%;
 }
 
 #buy-sold {
   position: absolute;
-  margin-top: 18%;
-  height: 50px;
-  width: 100px;
+  margin-top: 13%;
+  margin-left: -1em;
+  height: 5%;
+  width: 8%;
   z-index: 3;
   font-size: 20px;
   font-family: 'Righteous';

@@ -20,9 +20,7 @@ function Gallery({ shoeData, buyShoe }) {
                                 shoeColorParams={shoeColorParams}
                             />
                         </div>
-
                         <p>Price: $--</p>
-                        <p>Design details</p>
                         <Link to="/buy">
                             <button id="buy-sold" onClick={handleClick} disabled={shoe.isBought ? true : null} >
                                 {shoe.isBought ? "SOLD" : "BUY"}
