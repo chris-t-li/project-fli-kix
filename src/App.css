@@ -203,13 +203,19 @@ div#container {
   font-style: italic;
 }
 
-/* ========= COLOR PALLET ========== */
+/* ========= GALLERY ========== */
+
+#gallery {
+  background-color:  rgb(240, 227, 128);
+  z-index: -5;
+}
 
 div.shoe-card {
   display: inline-block;
   width: 25%;
   height: 400px;
   margin: 2em;
+  z-index: 1;
   /* border: solid 2px rgb(255, 255, 255); */
 }
 
@@ -224,9 +230,15 @@ div.shoe-card-img img {
   position: absolute;
   top: 0;
   left: 20%;
-  z-index: -1;
+  z-index: 0;
   border: solid 2px rgb(255, 255, 255);
+}
 
+#buy-sold {
+  position: absolute;
+  margin-top: 100px;
+  height: 20px;
+  z-index: 3;
 }
 
 /* div.shoe-card-img div#container,

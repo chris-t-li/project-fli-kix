@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Gallery({ shoeData, buyShoe }) {
 
     return (
-        <div >
+        <div id="gallery">
             {shoeData.map(shoe => {
                 const shoeColorParams = shoe["color-pallet"];
 
@@ -24,7 +24,7 @@ function Gallery({ shoeData, buyShoe }) {
                         <p>Price: $--</p>
                         <p>Design details</p>
                         <Link to="/buy">
-                            <button onClick={handleClick}>
+                            <button id="buy-sold" onClick={handleClick}>
                                 {shoe.isBought ? "SOLD" : "BUY"}
                             </button>
                         </Link>
