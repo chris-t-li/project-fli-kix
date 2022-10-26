@@ -7,6 +7,7 @@ import { Route } from "react-router-dom";
 
 function Main() {
     const [shoeData, setShoeData] = useState([]);
+    const [checkoutShoe, setCheckoutShoe] = useState({});
 
     useEffect(() => {
         fetch("http://localhost:3010/kix")
@@ -20,6 +21,21 @@ function Main() {
         setShoeData([...shoeData, obj])
     }
 
+    function buyShoe(shoe){
+        setCheckoutShoe(shoe);
+    }
+
+    function updateBoughtShoe(boughtShoe) {
+        setShoeData([...shoeData].map(shoe => {
+            if(boughtShoe.id === shoe.id) {
+                return {...shoe, isBought: true}
+            } else {
+                return shoe;
+            }
+        }))
+
+    }
+
     return (
         <>
             <Route exact path="/">
@@ -29,10 +45,14 @@ function Main() {
                 <DesignShoe renderNewShoe={renderNewShoe} />
             </Route>
             <Route path="/gallery">
-                <Gallery shoeData={shoeData} />
+                <Gallery shoeData={shoeData} buyShoe={buyShoe} />
             </Route>
-            <Route path="buy">
-                <Buy />
+            <Route path="/buy">
+                <Buy 
+                shoeData={shoeData} 
+                checkoutShoe={checkoutShoe}
+                updateBoughtShoe={updateBoughtShoe}
+                />
             </Route>
         </>
     );
