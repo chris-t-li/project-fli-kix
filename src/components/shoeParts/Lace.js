@@ -1,9 +1,14 @@
+function Lace({ colorObj, selectedPart }) {
+    const highlight = selectedPart === "Lace" ? { stroke: "#ffffff", strokeWidth: "2px", strokeOpacity: "0.99", strokeLinejoin: "round" } : null;
 
-function Lace({ colorObj }) {
+
     return (
         <svg
             // id="Layer_Lace" 
-            viewBox="0 0 750 750" className="product-svg" data-name="Layer 1">
+            viewBox="0 0 750 750" 
+            className="product-svg" 
+            data-name="Layer 1"
+            style={highlight}>
             <polygon
                 id="_Laces_"
                 fill={colorObj.Lace}

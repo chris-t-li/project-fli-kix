@@ -33,6 +33,7 @@ function Shoe({ selectedPart, addNewShoe }) {
 
     // Dynamically Update Color
     function changeColor(color) {
+        
         setColorObj({ ...colorObj, [selectedPart]: color })
     }
 
@@ -42,24 +43,26 @@ function Shoe({ selectedPart, addNewShoe }) {
     }
 
     return (
-        <div id="container">
-            {/* Layered <SVG><polygon> Components*/}
-            <Swoosh colorObj={colorObj} />
-            <EyeStay colorObj={colorObj} />
-            <Lace colorObj={colorObj} />
-            <Foxing colorObj={colorObj} />
-            <Heel colorObj={colorObj} />
-            <Quarter colorObj={colorObj} />
-            <Sole colorObj={colorObj} />
-            <Tip colorObj={colorObj} />
-            <Vamp colorObj={colorObj} />
-            <Lining colorObj={colorObj} />
-            <Tongue colorObj={colorObj} />
-            {/* Base Shoe Image */}
-            <img id="shoe" src={finalShoe} alt="shoe" />
-            {/* Color Pallet - Right Hand Side */}
-            <ShoeColors changeColor={changeColor} />
-            <button onClick={handleClick}>Save as NFK</button>
+        <div>
+            <div id="container">
+                {/* Layered <SVG><polygon> Components*/}
+                <Swoosh colorObj={colorObj} selectedPart={selectedPart} />
+                <EyeStay colorObj={colorObj} selectedPart={selectedPart} />
+                <Lace colorObj={colorObj} selectedPart={selectedPart} />
+                <Foxing colorObj={colorObj} selectedPart={selectedPart} />
+                <Heel colorObj={colorObj} selectedPart={selectedPart} />
+                <Quarter colorObj={colorObj} selectedPart={selectedPart} />
+                <Sole colorObj={colorObj} selectedPart={selectedPart} />
+                <Tip colorObj={colorObj} selectedPart={selectedPart} />
+                <Vamp colorObj={colorObj} selectedPart={selectedPart} />
+                <Lining colorObj={colorObj} selectedPart={selectedPart} />
+                <Tongue colorObj={colorObj} selectedPart={selectedPart} />
+                {/* Base Shoe Image */}
+                <img id="shoe" src={finalShoe} alt="shoe" />
+                {/* Color Pallet - Right Hand Side */}
+                <ShoeColors changeColor={changeColor} />
+            </div>
+            <button id="saveAsNfk" onClick={handleClick}>Save as NFK</button>
         </div>
     )
 }
