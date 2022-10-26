@@ -102,7 +102,7 @@
       "id": 6,
       "type": "AirForce Max",
       "isNFK": false,
-      "isBought": false,
+      "isBought": true,
       "color-pallet": {
         "Swoosh": "#df0000",
         "EyeStay": "#0059df",
