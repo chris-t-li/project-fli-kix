@@ -1,7 +1,9 @@
 
 function Lace({ colorObj }) {
     return (
-        <svg id="Layer_Lace" viewBox="0 0 750 750" className="product-svg" data-name="Layer 1">
+        <svg
+            // id="Layer_Lace" 
+            viewBox="0 0 750 750" className="product-svg" data-name="Layer 1">
             <polygon
                 id="_Laces_"
                 fill={colorObj.Lace}
