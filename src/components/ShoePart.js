@@ -10,7 +10,7 @@ function ShoePart({ part, selectedPart, selectShoePart }) {
         <div
             onClick={handleClick}
             className="shoePart"
-            style={{ backgroundColor: part === selectedPart ? "lightcoral" : null }}
+            style={{ backgroundColor: part === selectedPart ? "#F67280" : null }}
         >
             <h4>{part}</h4>
         </div>

@@ -39,7 +39,7 @@ function DesignShoe({ renderNewShoe }) {
     }
 
     return (
-        <div>
+        <div id="designScreen">
             <div id="selectShoePart">
                 <h3>Select part of shoe below</h3>
                 {shoeParts.map(part => {
