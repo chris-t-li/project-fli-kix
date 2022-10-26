@@ -24,12 +24,12 @@ function Gallery({ shoeData, buyShoe }) {
                         <p>Price: $--</p>
                         <p>Design details</p>
                         <Link to="/buy">
-                            <button onClick={handleClick}>
+                            <button onClick={handleClick} disabled={shoe.isBought ? true : null} >
                                 {shoe.isBought ? "SOLD" : "BUY"}
                             </button>
                         </Link>
                         {/* {shoe.isBought ?  */}
-                            {/* <div className="shoe-bought">
+                        {/* <div className="shoe-bought">
                             <h4>SOLD</h4>
                             
                     
