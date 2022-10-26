@@ -206,7 +206,7 @@ div#container {
 /* ========= GALLERY ========== */
 
 #gallery {
-  background-color:  rgb(240, 227, 128);
+  background-color:  rgb(250, 250, 250);
   z-index: -5;
 }
 
@@ -231,14 +231,44 @@ div.shoe-card-img img {
   top: 0;
   left: 20%;
   z-index: 0;
-  border: solid 2px rgb(255, 255, 255);
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+
+div.shoe-card h3 {
+  font-family: futura-pt-condensed, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
 #buy-sold {
   position: absolute;
-  margin-top: 100px;
-  height: 20px;
+  margin-top: 18%;
+  height: 50px;
+  width: 100px;
   z-index: 3;
+  font-size: 20px;
+  font-family: 'Righteous';
+  color: rgb(0, 0, 0);
+  background-color: rgb(64, 169, 102);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#buy-sold:hover:enabled {
+  background-color: rgb(53, 140, 85);
+  border: solid 2px black;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+  font-style: italic;
+}
+
+#buy-sold:disabled {
+  background-color: #F67280;
+  opacity: 0.75;
 }
 
 /* div.shoe-card-img div#container,
