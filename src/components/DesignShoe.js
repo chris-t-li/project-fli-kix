@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import ShoePart from "./ShoePart";
 import Shoe from "./Shoe";
+import { useHistory } from "react-router-dom";
 import domtoimage from "dom-to-image-more";
 
 const shoeParts = ["EyeStay", "Foxing", "Heel", "Lace", "Lining", "Quarter", "Swoosh", "Sole", "Tongue", "Tip", "Vamp"];
 
 function DesignShoe({ renderNewShoe }) {
     const [selectedPart, setSelectedPart] = useState("");
+    let history = useHistory();
 
     function selectShoePart(e) {
         setSelectedPart(e)
@@ -38,11 +40,14 @@ function DesignShoe({ renderNewShoe }) {
                             "isBought": false,
                             "color-pallet": colorObj,
                             "imageStr": base64String,
-                            "price": ETHprice,
+                            "price": ETHprice.toFixed(3),
                         })
                     })
                         .then(res => res.json())
-                        .then(obj => renderNewShoe(obj))
+                        .then(obj => {
+                            renderNewShoe(obj)
+                            history.push("/gallery")
+                        })
                 }
 
             })

@@ -47,7 +47,7 @@ function Shoe({ selectedPart, addNewShoe }) {
 
     // Dynamically Update Color
     function changeColor(color) {
-        
+
         setColorObj({ ...colorObj, [selectedPart]: color })
     }
 
