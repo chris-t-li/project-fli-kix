@@ -6,11 +6,11 @@ function NavBar() {
     return (
         <nav>
             <ul>
-                <img src={logo} alt="logo"/>
+                <img src={logo} alt="logo" />
                 <NavLink exact to="/">Home</NavLink>
                 <NavLink to="/design">Design Your Own</NavLink>
                 <NavLink to="/gallery">NFK Gallery</NavLink>
-                <NavLink to="/buy">Wallet: 1 ETH</NavLink>
+                <NavLink to="/buy">Checkout</NavLink>
             </ul>
         </nav>
     )

@@ -428,6 +428,16 @@ div#tempimgcontainer {
   padding: 20px;
 }
 
+#form-container div form div h3 {
+  font-size: 1.5em;
+  font-family: Righteous;
+}
+
+#form-container div form div h3 img {
+  height: 23px;
+  padding-left: 3px;
+}
+
 .checkout-shoe-main-image-container {
   width: 47%;
   float: left;
@@ -443,6 +453,10 @@ div#tempimgcontainer {
   border: solid 2px black;
   border-radius: 10px;
   box-shadow: 7px 7px 7px rgb(0, 0, 0);
+}
+
+.checkout-shoe-main-image-container+div+div {
+  margin-top: 1em;
 }
 
 .checkout-shoe-main-image-container img {
@@ -472,6 +486,8 @@ div#tempimgcontainer {
   /* box-shadow: 7px 7px 7px rgb(0, 0, 0); */
   font-style: italic;
 }
+
+
 
 /* #checkout-shoe-main-image {
   width: 40%;
