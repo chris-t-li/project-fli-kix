@@ -2,6 +2,7 @@ import ShoeFrameGallery from "./ShoeFrameGallery";
 import { Link } from "react-router-dom";
 
 function Gallery({ shoeData, buyShoe }) {
+    const eth = "https://openseauserdata.com/files/6f8e2979d428180222796ff4a33ab929.svg";
 
     return (
         <div id="gallery">
@@ -20,7 +21,7 @@ function Gallery({ shoeData, buyShoe }) {
                                 shoeColorParams={shoeColorParams}
                             />
                         </div>
-                        <p>{shoe.price} ETH</p>
+                        <p>{shoe.price} <img src={eth} alt="ETH"/></p>
                         <Link to="/buy">
                             <button id="buy-sold" onClick={handleClick} disabled={shoe.isBought ? true : null} >
                                 {shoe.isBought ? "SOLD" : "BUY"}

@@ -305,6 +305,7 @@ div.shoe-card p {
   margin-bottom: -0.2em;
   margin-top: -0.5em;
   margin-left: 75%;
+  z-index: 2;
   /* padding: 10px 5px 5px 20px; */
 }
 
