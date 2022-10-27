@@ -1,12 +1,41 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useHistory } from 'react-router-dom'
 
 function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
+    const [wallet, setWallet] = useState(1)
+    const [addETH, setAddETH] = useState(0)
 
     let history = useHistory();
+
+    const eth = "https://openseauserdata.com/files/6f8e2979d428180222796ff4a33ab929.svg";
+
+    useEffect(() => {
+        fetch("http://localhost:3010/wallet")
+            .then(res => res.json())
+            .then(amt => setWallet(amt[0].amount))
+    }, [])
+
+    function updateEthereum(e, newWalletAmt) {
+        e.preventDefault();
+        fetch(`http://localhost:3010/wallet/1`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify({
+                "id": 1,
+                "amount": newWalletAmt
+            })
+        })
+            .then(res => res.json())
+            .then(updatedWallet => {
+                setWallet(updatedWallet.amount)
+            })
+    }
 
     function handleCheckout(e) {
         console.log("bought")
@@ -15,6 +44,7 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
             name: name,
             email: email,
             phone: phone,
+            wallet: wallet
         }
 
         fetch(`http://localhost:3010/kix/${checkoutShoe.id}`, {
@@ -31,21 +61,37 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
             .then((res) => res.json())
             .then(boughtShoe => {
                 updateBoughtShoe(boughtShoe);
-
-                history.push("/gallery")
+                updateEthereum(e, wallet - parseFloat(boughtShoe.price));
+                history.push("/gallery");
             })
     }
 
     return (
         <div id="form-container">
             <div className="checkout-shoe-main-image-container">
+                <h3>{checkoutShoe.price}</h3>
                 <img id="checkout-shoe-main-image" src={checkoutShoe.imageStr} />
+            </div>
+
+            <div className="checkout-shoe-main-image-container">
+                <form onSubmit={(e) => updateEthereum(e, addETH + wallet)}>
+                    <div className="checkout-form-container">
+                        <h3>Wallet: {wallet} <img src={eth} alt="ETH Icon"></img></h3>
+                    </div>
+                    <div className="checkout-form-container">
+                        <input type="number" step="0.001" name="AddETH" placeholder="Add ETH" onChange={(e) => setAddETH(parseFloat(e.target.value))} />
+                    </div>
+                    <div className="checkout-form-container" id="addETH-btn">
+                        <input type="submit" name="addETH" value="Add to Wallet" />
+                    </div>
+                </form>
             </div>
             <div className="checkout-shoe-main-image-container">
                 <form onSubmit={handleCheckout}>
                     <fieldset>
+
                         <div className="checkout-form-container">
-                            <input type="text" name="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
+                            <input required type="text" name="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div className="checkout-form-container">
                             <input type="text" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
@@ -53,12 +99,14 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
                         <div className="checkout-form-container">
                             <input type="number" name="phone" placeholder="xxx-xxxx" onChange={(e) => setPhone(e.target.value)} />
                         </div>
+
                         <div className="checkout-form-container" id="checkout-btn">
                             <input type="submit" name="buy" value="Checkout" />
                         </div>
                     </fieldset>
                 </form>
             </div>
+
         </div>
     )
 }
