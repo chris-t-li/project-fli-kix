@@ -1,10 +1,11 @@
 import React from "react";
 
-function ShoePart({ part, selectedPart, selectShoePart, isSelect, setIsSelect }) {
+function ShoePart({ part, selectedPart, selectShoePart, isSelect, setIsSelect, setIsColorSelect }) {
 
     function handleClick(e) {
         selectShoePart(e.target.textContent);
         setIsSelect(true);
+        setIsColorSelect(false); // activate mouseOver in ColorTiles
     }
 
     function handleMouseOver(e) {

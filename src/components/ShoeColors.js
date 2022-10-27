@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ColorTile from "./ColorTile";
 
-function ShoeColors({ changeColor }) {
+function ShoeColors({ changeColor, isColorSelect, setIsColorSelect }) {
     //const [ind, setInd] = useState(true);
     let ind = true;
 
@@ -59,6 +59,8 @@ function ShoeColors({ changeColor }) {
                         key={hexColor}
                         hexColor={hexColor}
                         changeColor={changeColor}
+                        isColorSelect={isColorSelect}
+                        setIsColorSelect={setIsColorSelect}
                     />)
             })}
         </div>

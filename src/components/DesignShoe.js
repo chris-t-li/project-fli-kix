@@ -9,6 +9,8 @@ const shoeParts = ["EyeStay", "Foxing", "Heel", "Lace", "Lining", "Quarter", "Sw
 function DesignShoe({ renderNewShoe }) {
     const [selectedPart, setSelectedPart] = useState("");
     const [isSelect, setIsSelect] = useState(false); // Has a shoe part been selected? 
+    const [isColorSelect, setIsColorSelect] = useState(false); // Has a ColorTile been selected? State is used to hover over colors
+
 
     let history = useHistory();
 
@@ -67,6 +69,7 @@ function DesignShoe({ renderNewShoe }) {
                         selectShoePart={selectShoePart}
                         isSelect={isSelect}
                         setIsSelect={setIsSelect}
+                        setIsColorSelect={setIsColorSelect}
                     />
                 })
                 }
@@ -74,6 +77,8 @@ function DesignShoe({ renderNewShoe }) {
             <Shoe
                 selectedPart={selectedPart}
                 addNewShoe={addNewShoe}
+                isColorSelect={isColorSelect}
+                setIsColorSelect={setIsColorSelect}
             />
         </div>
     );

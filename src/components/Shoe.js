@@ -15,7 +15,7 @@ import Lining from "./shoeParts/Lining";
 import Tongue from "./shoeParts/Tongue";
 
 
-function Shoe({ selectedPart, addNewShoe }) {
+function Shoe({ selectedPart, addNewShoe, isColorSelect, setIsColorSelect }) {
     // Define State - {"ShoePart": "Color"}
     const [colorObj, setColorObj] = useState({
         "Swoosh": "#ffffff",
@@ -81,6 +81,8 @@ function Shoe({ selectedPart, addNewShoe }) {
                 <ShoeColors
                     changeColor={changeColor}
                     dynamicShowColor={dynamicShowColor}
+                    isColorSelect={isColorSelect}
+                    setIsColorSelect={setIsColorSelect}
                 />
             </div>
             <button id="saveAsNfk" onClick={handleClick}>Save as NFK</button>
