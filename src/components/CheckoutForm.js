@@ -25,6 +25,7 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
             },
             body: JSON.stringify({
                 isBought: true,
+                type: name,
             })
         })
             .then((res) => res.json())
@@ -36,29 +37,29 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
     }
 
     return (
-        <div >
-            <form onSubmit={handleCheckout} className="checkout-form">
-                <fieldset>
-                    <div className="checkout-form-container">
-                        <input type="text" name="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
-                    </div>
-                    <div className="checkout-form-container">
-                        <input type="text" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-                    </div>
-                    <div className="checkout-form-container">
-                        <input type="number" name="phone" placeholder="xxx-xxxx" onChange={(e) => setPhone(e.target.value)} />
-                    </div>
-                    <div className="checkout-form-container">
-                        <input type="submit" name="buy" value="CHECKOUT" />
-                    </div>
-                    <div id="checkout-shoe-main-image-container">
-                        <img id="checkout-shoe-main-image" src={checkoutShoe.imageStr} />
-                    </div>
-
-                </fieldset>
-            </form>
+        <div id="form-container">
+            <div className="checkout-shoe-main-image-container">
+                <img id="checkout-shoe-main-image" src={checkoutShoe.imageStr} />
+            </div>
+            <div className="checkout-shoe-main-image-container">
+                <form onSubmit={handleCheckout}>
+                    <fieldset>
+                        <div className="checkout-form-container">
+                            <input type="text" name="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
+                        </div>
+                        <div className="checkout-form-container">
+                            <input type="text" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                        </div>
+                        <div className="checkout-form-container">
+                            <input type="number" name="phone" placeholder="xxx-xxxx" onChange={(e) => setPhone(e.target.value)} />
+                        </div>
+                        <div className="checkout-form-container" id="checkout-btn">
+                            <input type="submit" name="buy" value="Checkout" />
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
         </div>
-
     )
 }
 

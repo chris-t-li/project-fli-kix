@@ -32,6 +32,25 @@ function Shoe({ selectedPart, setSelectedPart, addNewShoe, isColorSelect, setIsC
         "Card": "#ffffff"
     })
 
+    // {
+    //     "id": 1,
+    //     "type": "AirForce Max",
+    //     "isNFK": false,
+    //     "isBought": false,
+    //     "price": 0.12,
+    //     "color-pallet": {
+    //       "Swoosh": "#ff0000",
+    //       "EyeStay": "#020202",
+    //       "Foxing": "#d0b300",
+    //       "Heel": "#00dfbc",
+    //       "Lace": "#0081c6",
+    //       "Quarter": "#e9006f",
+    //       "Sole": "#FFFFFF",
+    //       "Tip": "#d0b300",
+    //       "Vamp": "#00dfbc"
+    //     }
+    // }
+
     // const [colorObj, setColorObj] = useState({
     //     "Swoosh": "#ff0000",
     //     "EyeStay": "#020202",
