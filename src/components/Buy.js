@@ -1,6 +1,5 @@
 import React from "react"
-import CheckoutForm from "./CheckoutForm"
-    ;
+import CheckoutForm from "./CheckoutForm";
 
 function Buy({ shoeData, checkoutShoe, updateBoughtShoe }) {
 
