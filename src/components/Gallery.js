@@ -21,10 +21,15 @@ function Gallery({ shoeData, buyShoe }) {
                                 shoeColorParams={shoeColorParams}
                             />
                         </div>
-                        <p>{shoe.price} <img src={eth} alt="ETH"/></p>
+                        <div id="ethereum-price-tag">
+                            {/* <p>{shoe.price} */}
+                            {/* <img src={eth} alt="ETH" /> */}
+                            {/* </p> */}
+                        </div>
                         <Link to="/buy">
                             <button id="buy-sold" onClick={handleClick} disabled={shoe.isBought ? true : null} >
-                                {shoe.isBought ? "SOLD" : "BUY"}
+                                {shoe.isBought ? "SOLD" : `BUY ${shoe.price}`}
+                                <img src={shoe.isBought ? null : eth} />
                             </button>
                         </Link>
                     </div>
