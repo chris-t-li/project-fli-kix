@@ -1,8 +1,8 @@
-function ColorTile({ hexColor, changeColor }) {
-    let ind = true; // temp assign. Need to change to state.
+function ColorTile({ hexColor, changeColor, isColorSelect, setIsColorSelect }) {
 
     function handleClick(e) {
         changeColor(e.target.value);
+        setIsColorSelect(true); // we have selected a color; deactivate mouseOver 
     }
 
     function handleMouseOver(e) {
@@ -12,7 +12,7 @@ function ColorTile({ hexColor, changeColor }) {
     return (
         <button
             onClick={handleClick}
-            onMouseOver={ind ? handleMouseOver : null}
+            onMouseOver={!isColorSelect ? handleMouseOver : null}
             className="color"
             style={{ "backgroundColor": hexColor }}
             value={hexColor}>
