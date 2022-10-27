@@ -32,39 +32,6 @@ function Shoe({ selectedPart, setSelectedPart, addNewShoe, isColorSelect, setIsC
         "Card": "#ffffff"
     })
 
-    // {
-    //     "id": 1,
-    //     "type": "AirForce Max",
-    //     "isNFK": false,
-    //     "isBought": false,
-    //     "price": 0.12,
-    //     "color-pallet": {
-    //       "Swoosh": "#ff0000",
-    //       "EyeStay": "#020202",
-    //       "Foxing": "#d0b300",
-    //       "Heel": "#00dfbc",
-    //       "Lace": "#0081c6",
-    //       "Quarter": "#e9006f",
-    //       "Sole": "#FFFFFF",
-    //       "Tip": "#d0b300",
-    //       "Vamp": "#00dfbc"
-    //     }
-    // }
-
-    // const [colorObj, setColorObj] = useState({
-    //     "Swoosh": "#ff0000",
-    //     "EyeStay": "#020202",
-    //     "Foxing": "#d0b300",
-    //     "Heel": "#00dfbc",
-    //     "Lace": "#0081c6",
-    //     "Quarter": "#e9006f",
-    //     "Sole": "#FFFFFF",
-    //     "Tip": "#d0b300",
-    //     "Vamp": "#00dfbc",
-    //     "Lining": "#e9006f",
-    //     "Tongue": "#00dfbc",
-    // })
-
     // Dynamically Update Color onClick
     function changeColor(color) {
         setColorObj({ ...colorObj, [selectedPart]: color })
@@ -82,7 +49,7 @@ function Shoe({ selectedPart, setSelectedPart, addNewShoe, isColorSelect, setIsC
 
     return (
         <div>
-            <div id="container" style={{ backgroundColor: colorObj.Card}}>
+            <div id="container" style={{ backgroundColor: colorObj.Card }}>
                 {/* Layered <SVG><polygon> Components*/}
                 <Swoosh colorObj={colorObj} selectedPart={selectedPart} />
                 <EyeStay colorObj={colorObj} selectedPart={selectedPart} />
