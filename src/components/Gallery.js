@@ -26,12 +26,6 @@ function Gallery({ shoeData, buyShoe }) {
                                 {shoe.isBought ? "SOLD" : "BUY"}
                             </button>
                         </Link>
-                        {/* {shoe.isBought ?  */}
-                        {/* <div className="shoe-bought">
-                            <h4>SOLD</h4>
-                            
-                    
-                        </div> */}
                     </div>
                 )
             })}
