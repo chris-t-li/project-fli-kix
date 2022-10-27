@@ -4,7 +4,7 @@ import Shoe from "./Shoe";
 import { useHistory } from "react-router-dom";
 import domtoimage from "dom-to-image-more";
 
-const shoeParts = ["EyeStay", "Foxing", "Heel", "Lace", "Lining", "Quarter", "Swoosh", "Sole", "Tongue", "Tip", "Vamp"];
+const shoeParts = ["EyeStay", "Foxing", "Heel", "Lace", "Lining", "Quarter", "Swoosh", "Sole", "Tongue", "Tip", "Vamp", "Card"];
 
 function DesignShoe({ renderNewShoe }) {
     const [selectedPart, setSelectedPart] = useState("");

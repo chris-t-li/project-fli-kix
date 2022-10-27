@@ -29,6 +29,7 @@ function Shoe({ selectedPart, setSelectedPart, addNewShoe, isColorSelect, setIsC
         "Vamp": "#ffffff",
         "Lining": "#ffffff",
         "Tongue": "#ffffff",
+        "Card": "#ffffff"
     })
 
     // const [colorObj, setColorObj] = useState({
@@ -62,7 +63,7 @@ function Shoe({ selectedPart, setSelectedPart, addNewShoe, isColorSelect, setIsC
 
     return (
         <div>
-            <div id="container">
+            <div id="container" style={{ backgroundColor: colorObj.Card}}>
                 {/* Layered <SVG><polygon> Components*/}
                 <Swoosh colorObj={colorObj} selectedPart={selectedPart} />
                 <EyeStay colorObj={colorObj} selectedPart={selectedPart} />
