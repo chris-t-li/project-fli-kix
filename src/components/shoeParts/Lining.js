@@ -1,11 +1,13 @@
 function Lining({ colorObj, selectedPart }) {
-    const highlight = selectedPart === "Lining" ? { stroke: "#ffffff", strokeOpacity: "0.99", 
-    strokeWidth: "6px", strokeLinejoin: "round" } : null;
+    const highlight = selectedPart === "Lining" ? {
+        stroke: "#000000", strokeOpacity: "0.99",
+        strokeWidth: "2px", strokeLinejoin: "round"
+    } : null;
 
     return (
         <svg
             // id="Layer_Lining" 
-            className="product-svg" 
+            className="product-svg"
             viewBox="0 0 750 750"
             style={highlight}>
             {/* <defs><style>.cls-1{fill:#d0b300;opacity:.25;}</style></defs> */}

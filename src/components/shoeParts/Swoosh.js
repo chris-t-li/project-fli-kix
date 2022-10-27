@@ -1,5 +1,5 @@
 function Swoosh({ colorObj, selectedPart }) {
-    const highlight = selectedPart === "Swoosh" ? { stroke: "#ffffff", strokeWidth: "3px", strokeLinejoin: "round" } : null;
+    const highlight = selectedPart === "Swoosh" ? { stroke: "#000000", strokeWidth: "2px", strokeLinejoin: "round" } : null;
 
     return (
         <svg

@@ -8,6 +8,8 @@ const shoeParts = ["EyeStay", "Foxing", "Heel", "Lace", "Lining", "Quarter", "Sw
 
 function DesignShoe({ renderNewShoe }) {
     const [selectedPart, setSelectedPart] = useState("");
+    const [isSelect, setIsSelect] = useState(false); // Has a shoe part been selected? 
+
     let history = useHistory();
 
     function selectShoePart(e) {
@@ -55,7 +57,7 @@ function DesignShoe({ renderNewShoe }) {
 
     return (
         <div id="designScreen">
-            <div id="selectShoePart">
+            <div id="selectShoePart" onMouseLeave={() => setIsSelect(false)}>
                 <h3>🔥 Select part of shoe below 👇</h3>
                 {shoeParts.map(part => {
                     return <ShoePart
@@ -63,6 +65,8 @@ function DesignShoe({ renderNewShoe }) {
                         key={part}
                         selectedPart={selectedPart}
                         selectShoePart={selectShoePart}
+                        isSelect={isSelect}
+                        setIsSelect={setIsSelect}
                     />
                 })
                 }

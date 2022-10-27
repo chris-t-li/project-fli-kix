@@ -1,10 +1,10 @@
 function Vamp({ colorObj, selectedPart }) {
-    const highlight = selectedPart === "Vamp" ? { stroke: "#ffffff", strokeOpacity: "0.85", strokeWidth: "5px", strokeLinejoin: "round" } : null;
+    const highlight = selectedPart === "Vamp" ? { stroke: "#000000", strokeOpacity: "0.85", strokeWidth: "2px", strokeLinejoin: "round" } : null;
 
     return (
         <svg
             // id="Layer_Vamp" 
-            className="product-svg" 
+            className="product-svg"
             viewBox="0 0 750 750"
             style={highlight}>
             {/* <defs><style>.cls-1{fill:#00dfbc;opacity:.25;stroke:#020202;stroke-miterlimit:10;stroke-width:.25px;}</style></defs> */}
