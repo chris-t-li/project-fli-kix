@@ -1,8 +1,9 @@
-function ColorTile({ hexColor, changeColor, isColorSelect, setIsColorSelect }) {
+function ColorTile({ setSelectedPart, hexColor, changeColor, isColorSelect, setIsColorSelect }) {
 
     function handleClick(e) {
         changeColor(e.target.value);
         setIsColorSelect(true); // we have selected a color; deactivate mouseOver 
+        setSelectedPart("");
     }
 
     function handleMouseOver(e) {
