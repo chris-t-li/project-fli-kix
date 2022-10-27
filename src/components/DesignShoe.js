@@ -14,6 +14,9 @@ function DesignShoe({ renderNewShoe }) {
 
     // Converts DOM element to image (blob) and then to a dataUrl. Ref: "https://stackoverflow.com/questions/73676544/how-to-save-domtoimage-to-localstorage"
     function addNewShoe(colorObj) {
+        const colorValues = Object.values(colorObj);
+        const ETHprice = 0.1 + 0.0175 * Math.max(0, new Set(colorValues).size - 2);
+
         domtoimage.toBlob(document.getElementById("container"))
             .then(function (blob) {
                 const reader = new FileReader();
@@ -34,7 +37,8 @@ function DesignShoe({ renderNewShoe }) {
                             "isNFK": false,
                             "isBought": false,
                             "color-pallet": colorObj,
-                            "imageStr": base64String
+                            "imageStr": base64String,
+                            "price": ETHprice,
                         })
                     })
                         .then(res => res.json())
