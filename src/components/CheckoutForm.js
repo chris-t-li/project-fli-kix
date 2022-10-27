@@ -1,11 +1,10 @@
 import React, { useState } from "react"
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
-    //const [isBought, setIsBought] = useState(true)
 
     let history = useHistory();
 
@@ -34,16 +33,12 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
 
                 history.push("/gallery")
             })
-        //.then(newCheckout => onCheckOut(newCheckout))
     }
-
 
     return (
         <div >
-            {/* <h2>Buy</h2> */}
             <form onSubmit={handleCheckout} className="checkout-form">
                 <fieldset>
-
                     <div className="checkout-form-container">
                         <input type="text" name="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
                     </div>
@@ -54,23 +49,13 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
                         <input type="number" name="phone" placeholder="xxx-xxxx" onChange={(e) => setPhone(e.target.value)} />
                     </div>
                     <div className="checkout-form-container">
-                        {/* <Link to="/gallery">  */}
                         <input type="submit" name="buy" value="CHECKOUT" />
-                        {/* </Link> */}
                     </div>
                     <div id="checkout-shoe-main-image-container">
                         <img id="checkout-shoe-main-image" src={checkoutShoe.imageStr} />
                     </div>
 
                 </fieldset>
-
-                {/* {isBought ? (
-                    <button onClick={() => setIsBought(false)}>Buy</button>
-                    ) :( 
-                    <button onClick={() => setIsBought(true)}>Sold</button>
-                    )} */}
-
-
             </form>
         </div>
 

@@ -1,11 +1,11 @@
 
 function Sole({ colorObj, selectedPart }) {
-    const highlight = selectedPart === "Sole" ? { stroke: "#ffffff",  strokeWidth: "5px", strokeLinejoin: "round" } : null;
+    const highlight = selectedPart === "Sole" ? { stroke: "#000000", strokeWidth: "2px", strokeLinejoin: "round" } : null;
 
     return (
         <svg
             // id="Layer_Sole" 
-            className="product-svg" 
+            className="product-svg"
             viewBox="0 0 750 750"
             style={highlight}>
             {/* <defs><style>.cls-1{opacity:.25;}</style></defs> */}

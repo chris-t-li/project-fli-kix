@@ -1,5 +1,5 @@
 function EyeStay({ colorObj, selectedPart }) {
-    const highlight = selectedPart === "EyeStay" ? { stroke: "#ffffff", strokeWidth: "2px", strokeLinejoin: "round" } : null;
+    const highlight = selectedPart === "EyeStay" ? { stroke: "#000000", strokeWidth: "2px", strokeLinejoin: "round" } : null;
 
 
     return (

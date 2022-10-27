@@ -1,5 +1,5 @@
 function Tip({ colorObj, selectedPart }) {
-    const highlight = selectedPart === "Tip" ? { stroke: "#ffffff", strokeOpacity: "0.85", strokeWidth: "5px", strokeLinejoin: "round" } : null;
+    const highlight = selectedPart === "Tip" ? { stroke: "#000000", strokeOpacity: "0.85", strokeWidth: "2px", strokeLinejoin: "round" } : null;
 
     return (
         <svg

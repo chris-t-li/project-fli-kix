@@ -1,10 +1,10 @@
 function Heel({ colorObj, selectedPart }) {
-    const highlight = selectedPart === "Heel" ? { stroke: "#ffffff", strokeWidth: "7px", strokeOpacity: "0.99", strokeLinejoin: "round" } : null;
+    const highlight = selectedPart === "Heel" ? { stroke: "#000000", strokeWidth: "2px", strokeOpacity: "0.99", strokeLinejoin: "round" } : null;
 
     return (
         <svg
             // id="Layer_Heel" 
-            className="product-svg" 
+            className="product-svg"
             viewBox="0 0 750 750"
             style={highlight}>
             {/* <defs><style>.cls-1{fill:#00dfbc;opacity:.25;stroke:#020202;stroke-miterlimit:10;stroke-width:.25px;}</style></defs> */}

@@ -45,9 +45,13 @@ function Shoe({ selectedPart, addNewShoe }) {
     //     "Tongue": "#00dfbc",
     // })
 
-    // Dynamically Update Color
+    // Dynamically Update Color onClick
     function changeColor(color) {
+        setColorObj({ ...colorObj, [selectedPart]: color })
+    }
 
+    // Dynamically Update Color onMouseOver
+    function dynamicShowColor(color) {
         setColorObj({ ...colorObj, [selectedPart]: color })
     }
 
@@ -74,7 +78,10 @@ function Shoe({ selectedPart, addNewShoe }) {
                 {/* Base Shoe Image */}
                 <img id="shoe" src={finalShoe} alt="shoe" />
                 {/* Color Pallet - Right Hand Side */}
-                <ShoeColors changeColor={changeColor} />
+                <ShoeColors
+                    changeColor={changeColor}
+                    dynamicShowColor={dynamicShowColor}
+                />
             </div>
             <button id="saveAsNfk" onClick={handleClick}>Save as NFK</button>
         </div>

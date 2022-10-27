@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import ColorTile from "./ColorTile";
 
 function ShoeColors({ changeColor }) {
+    //const [ind, setInd] = useState(true);
+    let ind = true;
 
     const colorsArray = [
         "#860111",
@@ -14,38 +17,25 @@ function ShoeColors({ changeColor }) {
         "#FFA12C",
         "#FFFFFF"
     ]
-    
-    // const colorsArray = [
-    //     "#e1e851",
-    //     "#8cd147",
-    //     "#4a9ccf",
-    //     "#661f45",
-    //     "#1e2024",
-    //     "#800000",
-    //     "#e28743",
-    //     "#FFFFFF"
-    // ]
 
-    // for (let i = 0; i < colorsArray.length; i++) {
-    //     colorsArray[i] = changeColor;
-    // }
-
-    function handleClick(e) {
-        //let hex = e.target.value
-        console.log("clicked")
-        changeColor(e.target.value)
+    function handleOnMouseLeave() {
+        changeColor("#ffffff")
+        //setInd(false);
     }
 
     return (
-        <div className="colorContainer">
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#860111" }} value="#860111"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#9D0218" }} value="#9D0218"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#B4041E" }} value="#B4041E"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#CB0525" }} value="#CB0525"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#FF872C" }} value="#FF872C"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#FE612C" }} value="#FE612C"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#FD3A2D" }} value="#FD3A2D"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#F11D28" }} value="#F11D28"></button>
+        <div
+            className="colorContainer"
+        // onMouseLeave={ind ? handleOnMouseLeave : null}
+        >
+            {colorsArray.map(hexColor => {
+                return (
+                    <ColorTile
+                        key={hexColor}
+                        hexColor={hexColor}
+                        changeColor={changeColor}
+                    />)
+            })}
         </div>
     )
 }

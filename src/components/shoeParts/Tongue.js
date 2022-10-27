@@ -1,6 +1,8 @@
 function Tongue({ colorObj, selectedPart }) {
-    const highlight = selectedPart === "Tongue" ? { stroke: "#ffffff", strokeOpacity: "0.99", 
-    strokeWidth: "3px", strokeLinejoin: "round" } : null;
+    const highlight = selectedPart === "Tongue" ? {
+        stroke: "#000000", strokeOpacity: "0.99",
+        strokeWidth: "2px", strokeLinejoin: "round"
+    } : null;
 
     return (
         <svg
