@@ -297,7 +297,7 @@ div.shoe-card h3 {
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: -0.1em;
-  margin-left: 25%;
+  margin-left: 20%;
 }
 
 div.shoe-card p {
@@ -307,7 +307,7 @@ div.shoe-card p {
   font-size: 1.5rem;
   text-transform: uppercase;
   margin-bottom: -0.2em;
-  margin-top: -0.5em;
+  margin-top: -2.5em;
   margin-left: 75%;
   z-index: 2;
   /* padding: 10px 5px 5px 20px; */
@@ -315,18 +315,23 @@ div.shoe-card p {
 
 #buy-sold {
   position: absolute;
-  margin-top: 15%;
-  margin-left: -1em;
-  height: 5%;
-  width: 8%;
+  margin-top: 16%;
+  margin-left: -1.8em;
+  height: 4.5%;
+  width: 10%;
   z-index: 3;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Righteous';
   color: rgb(0, 0, 0);
   background-color: rgb(64, 169, 102);
   border: 2px solid rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#buy-sold img {
+  height: 18px;
+  padding-left: 6px;
 }
 
 #buy-sold:hover:enabled {
@@ -432,7 +437,7 @@ div#tempimgcontainer {
   box-shadow: 7px 7px 7px rgb(0, 0, 0);
 }
 
-.checkout-shoe-main-image-container +div {
+.checkout-shoe-main-image-container+div {
   width: 30%;
   margin-left: 3em;
   border: solid 2px black;
@@ -467,6 +472,7 @@ div#tempimgcontainer {
   /* box-shadow: 7px 7px 7px rgb(0, 0, 0); */
   font-style: italic;
 }
+
 /* #checkout-shoe-main-image {
   width: 40%;
   display: flex;
