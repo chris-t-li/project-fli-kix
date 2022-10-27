@@ -20,7 +20,7 @@ function Gallery({ shoeData, buyShoe }) {
                                 shoeColorParams={shoeColorParams}
                             />
                         </div>
-                        <p>Price: ETH{shoe.price}</p>
+                        <p>{shoe.price} ETH</p>
                         <Link to="/buy">
                             <button id="buy-sold" onClick={handleClick} disabled={shoe.isBought ? true : null} >
                                 {shoe.isBought ? "SOLD" : "BUY"}
