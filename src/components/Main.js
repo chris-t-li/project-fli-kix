@@ -18,7 +18,7 @@ function Main() {
     }, []);
 
     function renderNewShoe(obj) {
-        setShoeData([...shoeData, obj])
+        setShoeData([obj, ...shoeData])
     }
 
     function buyShoe(shoe) {
