@@ -36,42 +36,45 @@
 /* ========= NAVBAR STYLING ========== */
 
 .App nav {
-  background-color: rgb(8, 35, 61);
+  /* background-color: rgb(8, 35, 61); */
   top: 0px;
   left: 0px;
+  /* height: 50 px; */
 }
 
 .App nav ul {
   margin: 0;
   padding: 0;
+  height: 5em;
 }
 
 .App nav ul a {
   color: rgb(8, 30, 61);
   font-size: 1.5em;
   text-decoration: none;
-  padding: 1.2em;
+  padding-left: 2em;
+  /* padding-top: 0.1em; */
   text-align: justify;
   display: inline-block;
-  color: rgb(129, 199, 222);
   font-size: 1.66em;
   font-family: 'Righteous';
+  margin-top: -1em;
+  margin-bottom: 3em;
 }
 
 .App nav ul a:hover {
   font-style: italic;
-  color: rgb(240, 227, 128);
+  color: rgb(228, 210, 80);
+  -webkit-text-stroke: 1px rgb(8, 30, 61);
   text-decoration: underline;
   text-shadow: 10px 10px 10px rgb(0, 0, 0);
 }
 
 .App nav ul img {
-  height: 3.7em;
-  background-color: rgb(8, 30, 61);
-  display: inline-block;
-  border: none;
-  padding: .7em;
-  /* width: 12.5%; */
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 100%;
 }
 
 /* ========= HOME PAGE ========== */
@@ -123,13 +126,19 @@ img#homeImg {
   font-style: italic;
 }
 
+#selectShoePart h3 {
+  font-family: 'Righteous';
+  font-style: italic;
+  font-size: 1.2em;
+}
+
 div#container {
   height: 750px;
   width: 750px;
   position: absolute;
   left: 25%;
   top: 15%;
-  /* border: solid 1px black; */
+  border-radius: 4px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
@@ -170,7 +179,7 @@ div#container {
   width: 60px;
   margin: 3px;
   margin-left: 0.5em;
-  /* border-radius: 18px; */
+  border-radius: 4px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   border: 2px solid rgb(157, 157, 157);
   cursor: pointer;
