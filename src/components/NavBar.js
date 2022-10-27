@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from "../assets/fli-kix-logo.png"
+import logo from "../assets/fli-kix-logo-new.png"
 
 function NavBar() {
     return (
