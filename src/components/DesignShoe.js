@@ -22,6 +22,7 @@ function DesignShoe({ renderNewShoe }) {
     function addNewShoe(colorObj) {
         const colorValues = Object.values(colorObj);
         const ETHprice = 0.1 + 0.0175 * Math.max(0, new Set(colorValues).size - 2);
+        setSelectedPart("");
 
         domtoimage.toBlob(document.getElementById("container"))
             .then(function (blob) {
@@ -76,6 +77,7 @@ function DesignShoe({ renderNewShoe }) {
             </div>
             <Shoe
                 selectedPart={selectedPart}
+                setSelectedPart={setSelectedPart}
                 addNewShoe={addNewShoe}
                 isColorSelect={isColorSelect}
                 setIsColorSelect={setIsColorSelect}
