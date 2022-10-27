@@ -419,3 +419,80 @@ div#tempimgcontainer {
   }
 }
 
+#form-container {
+  padding: 20px;
+}
+
+.checkout-shoe-main-image-container {
+  width: 47%;
+  float: left;
+  padding: 20px;
+  border: solid 2px black;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+}
+
+.checkout-shoe-main-image-container +div {
+  width: 30%;
+  margin-left: 3em;
+  border: solid 2px black;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+}
+
+.checkout-shoe-main-image-container img {
+  height: 500px;
+}
+
+.checkout-form-container input {
+  font-family: 'Righteous';
+  /* font-weight: 400; */
+  font-size: 1.85em;
+  /* font-style: italic; */
+  border-radius: 3px;
+  margin: 0.25em;
+  /* text-transform: uppercase; */
+}
+
+#checkout-btn input {
+  background-color: rgb(64, 169, 102);
+  border-radius: 6px;
+  width: 10em;
+}
+
+#checkout-btn input:hover {
+  /* background-color: rgb(64, 169, 102); */
+  background-color: rgb(53, 140, 85);
+  border: solid 2px black;
+  /* box-shadow: 7px 7px 7px rgb(0, 0, 0); */
+  font-style: italic;
+}
+/* #checkout-shoe-main-image {
+  width: 40%;
+  display: flex;
+  margin-left: auto;
+}
+
+div #checkout-shoe-main-image {
+  width: 40%;
+}
+
+div #form {
+  width: 60%;
+  margin-top: 1em;
+}
+
+.checkout-form fieldset div input {
+  width: 45%;
+  height: 1em;
+  margin: 1em;
+  display: flex;
+  margin-right: auto;
+  border: solid 2px black;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+  font-family: futura-pt-condensed, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  font-style: italic;
+} */
