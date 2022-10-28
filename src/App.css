@@ -426,6 +426,7 @@ div#tempimgcontainer {
 
 #form-container {
   padding: 20px;
+  min-width: 1200px;
 }
 
 #form-container div form div h3 {
@@ -439,12 +440,14 @@ div#tempimgcontainer {
 }
 
 .checkout-shoe-main-image-container {
-  width: 47%;
+  width: 50%;
   float: left;
   padding: 20px;
   border: solid 2px black;
   border-radius: 10px;
   box-shadow: 7px 7px 7px rgb(0, 0, 0);
+  margin: 2.75%;
+  margin-top: 1%;
 }
 
 .checkout-shoe-main-image-container+div {
@@ -492,7 +495,8 @@ div#addETH-btn.checkout-form-container input:hover {
 }
 
 .checkout-form-container input {
-  font-family: 'Righteous';
+  font-family: futura-pt-condensed, sans-serif;
+  font-weight: 700;
   /* font-weight: 400; */
   font-size: 1.85em;
   /* font-style: italic; */
