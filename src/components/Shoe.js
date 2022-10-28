@@ -29,7 +29,7 @@ function Shoe({ selectedPart, setSelectedPart, addNewShoe, isColorSelect, setIsC
     }
 
     function handleClick() {
-        console.log("hi")
+        //console.log("hi")
         addNewShoe(colorObj)
     }
 
