@@ -456,11 +456,39 @@ div#tempimgcontainer {
 }
 
 .checkout-shoe-main-image-container+div+div {
-  margin-top: 1em;
+  margin-top: 3.9em;
+  width: 30%;
+}
+
+.checkout-shoe-main-image-container fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .checkout-shoe-main-image-container img {
   height: 500px;
+}
+
+.checkout-shoe-main-image-container h3 {
+  font-family: futura-pt-condensed, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2em;
+}
+
+div#addETH-btn.checkout-form-container input {
+  background-color: rgb(18, 63, 126);
+  color: rgb(228, 210, 80);
+  border-radius: 10px;
+  width: 8em;
+}
+
+div#addETH-btn.checkout-form-container input:hover {
+  background-color: rgb(8, 35, 61);
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+  font-style: italic;
+  -webkit-text-stroke: 1px rgb(8, 30, 61);
 }
 
 .checkout-form-container input {
@@ -475,8 +503,9 @@ div#tempimgcontainer {
 
 #checkout-btn input {
   background-color: rgb(64, 169, 102);
-  border-radius: 6px;
-  width: 10em;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  width: 8em;
 }
 
 #checkout-btn input:hover {
@@ -484,7 +513,10 @@ div#tempimgcontainer {
   background-color: rgb(53, 140, 85);
   border: solid 2px black;
   /* box-shadow: 7px 7px 7px rgb(0, 0, 0); */
+  color:rgb(255, 255, 255);
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
   font-style: italic;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
 }
 
 

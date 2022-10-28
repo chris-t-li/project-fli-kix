@@ -69,17 +69,17 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
     return (
         <div id="form-container">
             <div className="checkout-shoe-main-image-container">
-                <h3>{checkoutShoe.price}</h3>
+                <h3>{name.toUpperCase()} Ξ {checkoutShoe.price}</h3>
                 <img id="checkout-shoe-main-image" src={checkoutShoe.imageStr} />
             </div>
 
             <div className="checkout-shoe-main-image-container">
                 <form onSubmit={(e) => updateEthereum(e, addETH + wallet)}>
                     <div className="checkout-form-container">
-                        <h3>Wallet: {wallet} <img src={eth} alt="ETH Icon"></img></h3>
+                        <h3>Wallet: {wallet.toFixed(4)} <img src={eth} alt="ETH Icon"></img></h3>
                     </div>
                     <div className="checkout-form-container">
-                        <input type="number" step="0.001" name="AddETH" placeholder="Add ETH" onChange={(e) => setAddETH(parseFloat(e.target.value))} />
+                        <input type="number" step="0.001" min="0" name="AddETH" placeholder="Add ETH" onChange={(e) => setAddETH(parseFloat(e.target.value))} />
                     </div>
                     <div className="checkout-form-container" id="addETH-btn">
                         <input type="submit" name="addETH" value="Add to Wallet" />
@@ -91,7 +91,7 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
                     <fieldset>
 
                         <div className="checkout-form-container">
-                            <input required type="text" name="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
+                            <input required type="text" name="name" placeholder="Name Your Design" onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div className="checkout-form-container">
                             <input type="text" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
