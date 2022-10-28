@@ -5,7 +5,7 @@ Oct 2022
 
 Technologies: HTML, CSS, JavaScript, React, 
 
-Collaborators - Alexandra Iglesias, Nicholas Fears, Chris Li
+Collaborators - Alexandra Iglesia, Nicholas Fears, Chris Li
 
 Inspired by Nike - Design your own shoes. This web application allows the user to customize the color pallet of Nike AirForce Max, save those changes to a gallery of Non-Fungible Kix and the ability to purchase using Ethereum.
 
