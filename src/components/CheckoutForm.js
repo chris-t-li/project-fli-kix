@@ -75,8 +75,7 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
     return (
         <div id="form-container">
             <div className="checkout-shoe-main-image-container">
-                <h3>{!!name ? name.toUpperCase() : null} </h3>
-                <h3>{checkoutShoe === {} ? null : checkoutLabel}</h3>
+                <h3>{(!!name ? `${name.toUpperCase()} Ξ ${checkoutShoe.price}` : null) || checkoutLabel} </h3>
                 <img id="checkout-shoe-main-image" src={checkoutShoe.imageStr} />
             </div>
 
