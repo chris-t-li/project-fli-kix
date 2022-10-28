@@ -15,22 +15,8 @@ import Lining from "./shoeParts/Lining";
 import Tongue from "./shoeParts/Tongue";
 
 
-function Shoe({ selectedPart, setSelectedPart, addNewShoe, isColorSelect, setIsColorSelect }) {
-    // Define State - {"ShoePart": "Color"}
-    const [colorObj, setColorObj] = useState({
-        "Swoosh": "#ffffff",
-        "EyeStay": "#ffffff",
-        "Foxing": "#ffffff",
-        "Heel": "#ffffff",
-        "Lace": "#ffffff",
-        "Quarter": "#ffffff",
-        "Sole": "#ffffff",
-        "Tip": "#ffffff",
-        "Vamp": "#ffffff",
-        "Lining": "#ffffff",
-        "Tongue": "#ffffff",
-        "Card": "#ffffff"
-    })
+function Shoe({ selectedPart, setSelectedPart, addNewShoe, isColorSelect, setIsColorSelect, colorObj, setColorObj }) {
+
 
     // Dynamically Update Color onClick
     function changeColor(color) {

@@ -3,11 +3,30 @@ import DesignShoe from "./DesignShoe";
 import Home from "./Home";
 import Gallery from "./Gallery";
 import Buy from "./Buy";
-import { Route } from "react-router-dom";
+import { Route, useHistory } from "react-router-dom";
 
 function Main() {
     const [shoeData, setShoeData] = useState([]);
     const [checkoutShoe, setCheckoutShoe] = useState({});
+    //    const [editShoeColors, setEditShoeColors] = useState(); // Make edits to shoe colors
+
+    // Define State - {"ShoePart": "Color"}
+    const [colorObj, setColorObj] = useState({
+        "Swoosh": "#ffffff",
+        "EyeStay": "#ffffff",
+        "Foxing": "#ffffff",
+        "Heel": "#ffffff",
+        "Lace": "#ffffff",
+        "Quarter": "#ffffff",
+        "Sole": "#ffffff",
+        "Tip": "#ffffff",
+        "Vamp": "#ffffff",
+        "Lining": "#ffffff",
+        "Tongue": "#ffffff",
+        "Card": "#ffffff"
+    })
+
+    let history = useHistory();
 
     useEffect(() => {
         fetch("http://localhost:3010/kix")
@@ -25,6 +44,17 @@ function Main() {
         setCheckoutShoe(shoe);
     }
 
+    function editShoe(shoe) {
+        //console.log("In Main", shoe);
+        fetch(`http://localhost:3010/kix/${shoe.id}`)
+            .then(res => res.json())
+            .then(shoe => {
+                setColorObj(shoe["color-pallet"])
+                history.push("/design")
+            })
+            .catch(err => console.error(err))
+    }
+
     function updateBoughtShoe(boughtShoe) {
         const filtArr = [...shoeData].filter(shoe => {
             return boughtShoe.id !== shoe.id
@@ -38,10 +68,10 @@ function Main() {
                 <Home />
             </Route>
             <Route path="/design">
-                <DesignShoe renderNewShoe={renderNewShoe} />
+                <DesignShoe renderNewShoe={renderNewShoe} colorObj={colorObj} setColorObj={setColorObj} />
             </Route>
             <Route path="/gallery">
-                <Gallery shoeData={shoeData} buyShoe={buyShoe} />
+                <Gallery shoeData={shoeData} buyShoe={buyShoe} editShoe={editShoe} />
             </Route>
             <Route path="/buy">
                 <Buy

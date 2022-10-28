@@ -1,7 +1,7 @@
 import ShoeFrameGallery from "./ShoeFrameGallery";
 import { Link } from "react-router-dom";
 
-function Gallery({ shoeData, buyShoe }) {
+function Gallery({ shoeData, buyShoe, editShoe }) {
     const eth = "https://openseauserdata.com/files/6f8e2979d428180222796ff4a33ab929.svg";
 
     return (
@@ -19,6 +19,7 @@ function Gallery({ shoeData, buyShoe }) {
                             <ShoeFrameGallery key={shoe.id}
                                 shoe={shoe}
                                 shoeColorParams={shoeColorParams}
+                                editShoe={editShoe}
                             />
                         </div>
                         <div id="ethereum-price-tag">

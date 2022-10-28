@@ -6,7 +6,7 @@ import domtoimage from "dom-to-image-more";
 
 const shoeParts = ["EyeStay", "Foxing", "Heel", "Lace", "Lining", "Quarter", "Swoosh", "Sole", "Tongue", "Tip", "Vamp", "Card"];
 
-function DesignShoe({ renderNewShoe }) {
+function DesignShoe({ renderNewShoe, colorObj, setColorObj }) {
     const [selectedPart, setSelectedPart] = useState("");
     const [isSelect, setIsSelect] = useState(false); // Has a shoe part been selected? 
     const [isColorSelect, setIsColorSelect] = useState(false); // Has a ColorTile been selected? State is used to hover over colors
@@ -81,6 +81,8 @@ function DesignShoe({ renderNewShoe }) {
                 addNewShoe={addNewShoe}
                 isColorSelect={isColorSelect}
                 setIsColorSelect={setIsColorSelect}
+                colorObj={colorObj}
+                setColorObj={setColorObj}
             />
         </div>
     );
