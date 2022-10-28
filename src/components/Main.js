@@ -55,6 +55,10 @@ function Main() {
             .catch(err => console.error(err))
     }
 
+    function resetShoeColors(resetColorObj) {
+        setColorObj(resetColorObj);
+    }
+
     function updateBoughtShoe(boughtShoe) {
         const filtArr = [...shoeData].filter(shoe => {
             return boughtShoe.id !== shoe.id
@@ -68,7 +72,7 @@ function Main() {
                 <Home />
             </Route>
             <Route path="/design">
-                <DesignShoe renderNewShoe={renderNewShoe} colorObj={colorObj} setColorObj={setColorObj} />
+                <DesignShoe renderNewShoe={renderNewShoe} colorObj={colorObj} setColorObj={setColorObj} resetShoeColors={resetShoeColors} />
             </Route>
             <Route path="/gallery">
                 <Gallery shoeData={shoeData} buyShoe={buyShoe} editShoe={editShoe} />
