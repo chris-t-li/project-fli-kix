@@ -38,38 +38,45 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
     }
 
     function handleCheckout(e) {
-        console.log("bought")
+        //console.log("bought")
         e.preventDefault()
-        const checkoutData = {
-            name: name,
-            email: email,
-            phone: phone,
-            wallet: wallet
-        }
+        if (wallet < parseFloat(checkoutShoe.price)) {
+            alert("You don't have enough ETH to make this purchase!!")
+        } else {
+            const checkoutData = {
+                name: name,
+                email: email,
+                phone: phone,
+                wallet: wallet
+            }
 
-        fetch(`http://localhost:3010/kix/${checkoutShoe.id}`, {
-            method: "PATCH",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-            },
-            body: JSON.stringify({
-                isBought: true,
-                type: name,
+            fetch(`http://localhost:3010/kix/${checkoutShoe.id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    isBought: true,
+                    type: name,
+                })
             })
-        })
-            .then((res) => res.json())
-            .then(boughtShoe => {
-                updateBoughtShoe(boughtShoe);
-                updateEthereum(e, wallet - parseFloat(boughtShoe.price));
-                history.push("/gallery");
-            })
+                .then((res) => res.json())
+                .then(boughtShoe => {
+                    updateBoughtShoe(boughtShoe);
+                    updateEthereum(e, wallet - parseFloat(boughtShoe.price));
+                    history.push("/gallery");
+                })
+        }
     }
+
+    const checkoutLabel = Object.keys(checkoutShoe).length === 0 ? null : `${checkoutShoe.type.toUpperCase()} Ξ ${checkoutShoe.price}`;
 
     return (
         <div id="form-container">
             <div className="checkout-shoe-main-image-container">
-                <h3>{name.toUpperCase()} Ξ {checkoutShoe.price}</h3>
+                <h3>{!!name ? name.toUpperCase() : null} </h3>
+                <h3>{checkoutShoe === {} ? null : checkoutLabel}</h3>
                 <img id="checkout-shoe-main-image" src={checkoutShoe.imageStr} />
             </div>
 
@@ -91,7 +98,7 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
                     <fieldset>
 
                         <div className="checkout-form-container">
-                            <input required type="text" name="name" placeholder="Name Your Design" onChange={(e) => setName(e.target.value)} />
+                            <input required type="text" name="name" placeholder="Name Your NFK" onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div className="checkout-form-container">
                             <input type="text" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
