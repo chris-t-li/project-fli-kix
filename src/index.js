@@ -1,13 +1,16 @@
-const express = require('express')
-const server = express()
+const jsonServer = require('json-server')
+const server = jsonServer.create()
+const router = jsonServer.router('db.json')
 
-server.use((req, res) => {
-  res.send("Hi, welcome to FLI-KIX")
-})
+const middlewares = jsonServer.defaults()
 
-const PORT = process.env.PORT || 5000
-server.listen(PORT, () => {
-  console.log('Server listening on http://localhost:' + PORT)
+server.use(middlewares)
+server.use(router)
+
+const port = process.env.PORT || 3000
+
+server.listen(port, () => {
+  console.log(`JSON Server is running on port ${port}`)
 })
 
 import React from 'react';
