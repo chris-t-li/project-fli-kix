@@ -29,7 +29,7 @@ function Main() {
     let history = useHistory();
 
     useEffect(() => {
-        fetch("http://localhost:3010/kix")
+        fetch("https://fli-kix-app.herokuapp.com/kix")
             .then(res => res.json())
             .then(data => {
                 return setShoeData(data)
@@ -46,7 +46,7 @@ function Main() {
 
     function editShoe(shoe) {
         //console.log("In Main", shoe);
-        fetch(`http://localhost:3010/kix/${shoe.id}`)
+        fetch(`https://fli-kix-app.herokuapp.com/kix/${shoe.id}`)
             .then(res => res.json())
             .then(shoe => {
                 setColorObj(shoe["color-pallet"])

@@ -33,7 +33,7 @@ function DesignShoe({ renderNewShoe, colorObj, setColorObj, resetShoeColors }) {
                     localStorage.setItem("design-image3", base64String);
 
                     // POST New Shoe to db.json
-                    fetch("http://localhost:3010/kix", {
+                    fetch("https://fli-kix-app.herokuapp.com/kix", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
