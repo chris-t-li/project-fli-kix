@@ -30,7 +30,7 @@ function Gallery({ shoeData, buyShoe, editShoe }) {
                         <Link to="/buy">
                             <button id="buy-sold" onClick={handleClick} disabled={shoe.isBought ? true : null} >
                                 {shoe.isBought ? "SOLD" : `BUY ${shoe.price}`}
-                                <img src={shoe.isBought ? null : eth} alt="Ethereum Icon" />
+                                <img src={shoe.isBought ? null : eth} />
                             </button>
                         </Link>
                     </div>
