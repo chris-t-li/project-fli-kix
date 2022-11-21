@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import ColorTile from "./ColorTile";
 
 function ShoeColors({ setSelectedPart, changeColor, isColorSelect, setIsColorSelect }) {
-    //const [ind, setInd] = useState(true);
-    let ind = true;
 
     const colorsArray = [
         // reds
@@ -13,7 +11,7 @@ function ShoeColors({ setSelectedPart, changeColor, isColorSelect, setIsColorSel
         "#CB0525",
         // oranges
         "#FD3A2D",
-        "#FE612C",    
+        "#FE612C",
         "#FF872C",
         "#FFA12C",
         // yellows    
@@ -43,15 +41,9 @@ function ShoeColors({ setSelectedPart, changeColor, isColorSelect, setIsColorSel
         "#FFFFFF"
     ]
 
-    function handleOnMouseLeave() {
-        changeColor("#ffffff")
-        //setInd(false);
-    }
-
     return (
         <div
             className="colorContainer"
-        // onMouseLeave={ind ? handleOnMouseLeave : null}
         >
             {colorsArray.map(hexColor => {
                 return (

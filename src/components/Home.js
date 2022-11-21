@@ -3,7 +3,7 @@ import backgroundImage from "../assets/choose-your-element-background.gif"
 
 function Home() {
     return (
-        <img id="homeImg" src={backgroundImage}></img>
+        <img id="homeImg" src={backgroundImage} alt="main shoe GIF"></img>
     )
 }
 

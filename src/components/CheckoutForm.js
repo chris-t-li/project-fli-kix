@@ -13,14 +13,14 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
     const eth = "https://openseauserdata.com/files/6f8e2979d428180222796ff4a33ab929.svg";
 
     useEffect(() => {
-        fetch("https://fli-kix-app.herokuapp.com/wallet")
+        fetch("https://fli-kix-server.herokuapp.com/wallet")
             .then(res => res.json())
             .then(amt => setWallet(amt[0].amount))
     }, [])
 
     function updateEthereum(e, newWalletAmt) {
         e.preventDefault();
-        fetch(`https://fli-kix-app.herokuapp.com/wallet/1`, {
+        fetch(`https://fli-kix-server.herokuapp.com/wallet/1`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -49,8 +49,9 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
                 phone: phone,
                 wallet: wallet
             }
+            console.log(checkoutData)
 
-            fetch(`https://fli-kix-app.herokuapp.com/kix/${checkoutShoe.id}`, {
+            fetch(`https://fli-kix-server.herokuapp.com/kix/${checkoutShoe.id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
@@ -76,7 +77,7 @@ function CheckoutForm({ checkoutShoe, updateBoughtShoe }) {
         <div id="form-container">
             <div className="checkout-shoe-main-image-container">
                 <h3>{(!!name ? `${name.toUpperCase()} Ξ ${checkoutShoe.price}` : null) || checkoutLabel} </h3>
-                <img id="checkout-shoe-main-image" src={checkoutShoe.imageStr} />
+                <img id="checkout-shoe-main-image" src={checkoutShoe.imageStr} alt="designed shoe" />
             </div>
 
             <div className="checkout-shoe-main-image-container">

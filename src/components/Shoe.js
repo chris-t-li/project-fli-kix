@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // import shoe from './shoe.svg';
 import finalShoe from "../assets/finalShoe.png";
 import ShoeColors from "./ShoeColors";
