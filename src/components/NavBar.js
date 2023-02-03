@@ -1,15 +1,16 @@
 import { NavLink } from "react-router-dom";
-import logo from "../assets/fli-kix-logo.png"
+import logo from "../assets/fli-kix-logo-new.png"
 
 function NavBar() {
+
     return (
         <nav>
             <ul>
-                <img src={logo} />
+                <img src={logo} alt="logo" />
                 <NavLink exact to="/">Home</NavLink>
                 <NavLink to="/design">Design Your Own</NavLink>
                 <NavLink to="/gallery">NFK Gallery</NavLink>
-                <NavLink to="/buy">Buy</NavLink>
+                <NavLink to="/buy">Checkout</NavLink>
             </ul>
         </nav>
     )

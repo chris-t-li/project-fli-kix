@@ -1,10 +1,10 @@
 function Quarter({ colorObj, selectedPart }) {
-    const highlight = selectedPart === "Quarter" ? { stroke: "#ffffff", strokeOpacity: "0.75", strokeWidth: "5px", strokeLinejoin: "round" } : null;
+    const highlight = selectedPart === "Quarter" ? { stroke: "#000000", strokeOpacity: "0.75", strokeWidth: "2px", strokeLinejoin: "round" } : null;
 
     return (
         <svg
             // id="Layer_Quarter" 
-            className="product-svg" 
+            className="product-svg"
             viewBox="0 0 750 750"
             style={highlight}>
             {/* <defs><style>.cls-1{fill:#e9006f;opacity:.25;}</style></defs> */}

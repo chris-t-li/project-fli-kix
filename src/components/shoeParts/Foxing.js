@@ -1,10 +1,10 @@
 function Foxing({ colorObj, selectedPart }) {
-    const highlight = selectedPart === "Foxing" ? { stroke: "#ffffff", strokeOpacity: "0.99", strokeWidth: "7px", strokeLinejoin: "round" } : null;
+    const highlight = selectedPart === "Foxing" ? { stroke: "#000000", strokeOpacity: "0.99", strokeWidth: "2px", strokeLinejoin: "round" } : null;
 
     return (
         <svg
             // id="Layer_Foxing" 
-            className="product-svg" 
+            className="product-svg"
             viewBox="0 0 750 750"
             style={highlight}>
             {/* <defs><style>.cls-1{fill:#d0b300;opacity:.25;}</style></defs> */}

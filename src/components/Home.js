@@ -1,9 +1,9 @@
 // import backgroundImage from "../assets/homebackground.jpg"
-import clouds from "../assets/clouds-gfe9245bbd_1920.jpg"
+import backgroundImage from "../assets/choose-your-element-background.gif"
 
 function Home() {
     return (
-        <img id="homeImg" src={clouds}></img>
+        <img id="homeImg" src={backgroundImage}></img>
     )
 }
 

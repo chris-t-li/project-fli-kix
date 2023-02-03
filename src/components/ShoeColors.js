@@ -1,34 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
+import ColorTile from "./ColorTile";
 
-function ShoeColors({ changeColor }) {
+function ShoeColors({ setSelectedPart, changeColor, isColorSelect, setIsColorSelect }) {
+    //const [ind, setInd] = useState(true);
+    let ind = true;
 
     const colorsArray = [
-        "#e1e851",
-        "#8cd147",
-        "#4a9ccf",
-        "#661f45",
-        "#1e2024",
-        "#800000"
+        // reds
+        "#860111",
+        "#9D0218",
+        "#B4041E",
+        "#CB0525",
+        // oranges
+        "#FD3A2D",
+        "#FE612C",    
+        "#FF872C",
+        "#FFA12C",
+        // yellows    
+        "#FFBF2E",
+        "#FFE134",
+        "#FFFF00",
+        "#EBF2B3",
+        // greens
+        "#1B4001",
+        "#3B7302",
+        "#65A603",
+        "#9BBF65",
+        // blues
+        "#03045E",
+        "#0077B6",
+        "#00B4D8",
+        "#90E0EF",
+        // purples
+        "#3C1361",
+        "#52307C",
+        "#B491C8",
+        "#BCA0DC",
+        // greyscale
+        "#000000",
+        "#333333",
+        "#999999",
+        "#FFFFFF"
     ]
 
-    // for (let i = 0; i < colorsArray.length; i++) {
-    //     colorsArray[i] = changeColor;
-    // }
-
-    function handleClick(e) {
-        //let hex = e.target.value
-        console.log("clicked")
-        changeColor(e.target.value)
+    function handleOnMouseLeave() {
+        changeColor("#ffffff")
+        //setInd(false);
     }
 
     return (
-        <div className="colorContainer">
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#e1e851" }} value="#e1e851"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#8cd147" }} value="#8cd147"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#4a9ccf" }} value="#4a9ccf"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#661f45" }} value="#661f45"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#1e2024" }} value="#1e2024"></button>
-            <button onClick={handleClick} className="color" style={{ "backgroundColor": "#800000" }} value="#800000"></button>
+        <div
+            className="colorContainer"
+        // onMouseLeave={ind ? handleOnMouseLeave : null}
+        >
+            {colorsArray.map(hexColor => {
+                return (
+                    <ColorTile
+                        key={hexColor}
+                        hexColor={hexColor}
+                        changeColor={changeColor}
+                        isColorSelect={isColorSelect}
+                        setIsColorSelect={setIsColorSelect}
+                        setSelectedPart={setSelectedPart}
+                    />)
+            })}
         </div>
     )
 }
